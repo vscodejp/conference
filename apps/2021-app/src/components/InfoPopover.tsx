@@ -4,8 +4,8 @@ import i18next from 'i18next'
 import { DetailIcon } from './Icon'
 import popoverStyles from '../static/Popover.module.scss'
 import tagStyles from '../static/Tag.module.scss'
-import type { ITrack } from '../contents/sessions'
 import { ColorThemeContext } from '../lib/ColorThemeContext'
+import { ITrack } from '../../../../libs/shared/types/session'
 
 interface InfoPopover {
   track: ITrack

@@ -1,32 +1,10 @@
-type TrackID = 'track1' | 'track2'
-type TrackName = 'Track A' | 'Track B'
-type PersonType = 'presenter' | 'inviter'
-
-export interface ITrack {
-  isEmpty: boolean
-  isRest: boolean
-  trackId: TrackID
-  personType?: PersonType
-  presenterName?: string
-  presenterTitle?: string
-  presenterDescription?: string
-  presenterLive?: boolean
-  presenterLevel?: 'beginner' | 'intermediate'
-  presenterBio?: string
-  presenterUrl?: string
-}
-
-interface ISession {
-  tracks: Array<ITrack>
-  startTime: string
-  endTime: string
-}
+import { ISession, TrackID, TrackName } from '../../../../libs/shared/types/session'
 
 export const tracks: TrackID[] = ['track1', 'track2']
 
 export const trackNames: TrackName[] = ['Track A', 'Track B']
 
-export const sessions: Array<ISession> = [
+export const sessions: ISession[] = [
   {
     tracks: [
       {
