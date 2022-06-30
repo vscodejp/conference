@@ -1,0 +1,16 @@
+{
+  "name": "VS Code Conference JP 2021",
+  "short_name": "vscodecon.jp 2021",
+  "icons": [
+    {
+      "src": "icons/bakeneko2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "Scope": "/conference/",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#000",
+  "background_color": "#000"
+}

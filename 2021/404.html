@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="manifest" href="https://vscodejp.github.io/conference/2021/manifest.json"/><title>404: This page could not be found</title><meta name="next-head-count" content="4"/><link rel="preload" href="/conference/2021/_next/static/css/d107e7910814055c.css" as="style"/><link rel="stylesheet" href="/conference/2021/_next/static/css/d107e7910814055c.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/conference/2021/_next/static/chunks/polyfills-0d1b80a048d4787e.js"></script><script src="/conference/2021/_next/static/chunks/webpack-89c8f61d73106264.js" defer=""></script><script src="/conference/2021/_next/static/chunks/main-0eee19c98af23e24.js" defer=""></script><script src="/conference/2021/_next/static/chunks/pages/_app-19b41c86be5650fb.js" defer=""></script><script src="/conference/2021/_next/static/chunks/pages/_error-7608f7038469bf2b.js" defer=""></script><script src="/conference/2021/_next/static/mMxie23uV555rcQ_4EIK7/_buildManifest.js" defer=""></script><script src="/conference/2021/_next/static/mMxie23uV555rcQ_4EIK7/_ssgManifest.js" defer=""></script></head><body><script>
+                (function() {
+                    var preferDarkQuery = '(prefers-color-scheme: dark)';
+                    var mql = window.matchMedia(preferDarkQuery);
+                    var supportsColorSchemeQuery = mql.media === preferDarkQuery;
+                    function getInitialColorMode() {
+                        try {
+                            var persistedColorPreference = localStorage.getItem('color-mode');
+                            if (persistedColorPreference) {
+                                return persistedColorPreference;
+                            }
+                        } catch (err) {}
+                        if (supportsColorSchemeQuery) {
+                            return mql.matches ? 'dark' : 'light';
+                        }
+                        return 'light';
+                    }
+                    function setThemeColors(mode) {
+                        var root = document.documentElement;
+                        root.style.setProperty('--initial-color-mode', mode);
+                        root.style.setProperty(
+                            '--color-text',
+                            mode === 'light'
+                                ? '#252526'
+                                : '#f3f3f3'
+                        );
+                        root.style.setProperty(
+                            '--color-background',
+                            mode === 'light'
+                                ? '#f3f3f3'
+                                : '#252526'
+                        );
+                    }
+                    var colorMode = getInitialColorMode();
+                    setThemeColors(colorMode);
+                    if (supportsColorSchemeQuery) {
+                        mql.addListener(function (ev) {
+                            setThemeColors(ev.matches ? 'dark' : 'light');
+                        });
+                    }
+                })();
+            </script><div id="__next"><div style="font-family:-apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, &quot;Fira Sans&quot;, Avenir, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><div><style>
+                body { margin: 0; color: #000; background: #fff; }
+                .next-error-h1 {
+                  border-right: 1px solid rgba(0, 0, 0, .3);
+                }
+                
+                @media (prefers-color-scheme: dark) {
+                  body { color: #fff; background: #000; }
+                  .next-error-h1 {
+                    border-right: 1px solid rgba(255, 255, 255, .3);
+                  }
+                }</style><h1 class="next-error-h1" style="display:inline-block;margin:0;margin-right:20px;padding:10px 23px 10px 0;font-size:24px;font-weight:500;vertical-align:top">404</h1><div style="display:inline-block;text-align:left;line-height:49px;height:49px;vertical-align:middle"><h2 style="font-size:14px;font-weight:normal;line-height:inherit;margin:0;padding:0">This page could not be found<!-- -->.</h2></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"statusCode":404}},"page":"/_error","query":{},"buildId":"mMxie23uV555rcQ_4EIK7","assetPrefix":"/conference/2021","nextExport":true,"isFallback":false,"gip":true,"scriptLoader":[]}</script></body></html>
