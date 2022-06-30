@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "2021-app": "apps/2021-app"
+  }
+}

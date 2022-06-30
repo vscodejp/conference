@@ -1,0 +1,66 @@
+.section {
+  width: min(80vw, 1080px);
+  padding-top: min(7.2vw, 100px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section h2 {
+  width: 100%;
+  padding: min(1.6vw, 22px) 0;
+  font-family: 'UD新ゴ B', sans-serif;
+  font-size: min(1.8vw, 20px);
+  color: #fefefe;
+  text-align: center;
+  background: linear-gradient(22deg, #0098ff, #007acc, #0065a9);
+  border-radius: min(0.4vw, 5px);
+}
+
+.section h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 0;
+  font-family: 'UD新ゴ B', sans-serif;
+  font-size: min(1.6vw, 18px);
+}
+
+.detail {
+  width: 100%;
+  padding: 30px;
+  color: #000;
+  background-color: #d1d3f8;
+  border-radius: min(0.4vw, 5px);
+}
+
+.detail dl {
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: left;
+  letter-spacing: 0.085em;
+  vertical-align: top;
+}
+
+.detail dl dt {
+  min-width: 240px;
+
+  @media (max-width: 600px) {
+    min-width: 60px;
+  }
+}
+
+.detail dd {
+  width: calc(100% - 240px);
+
+  a {
+    color: #ec28e0;
+  }
+
+  @media (max-width: 600px) {
+    min-width: calc(100% - 60px);
+  }
+}

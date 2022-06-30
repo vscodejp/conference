@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: min(6vw, 86px);
+  padding: 0 min(7.2vw, 100px);
+  font-family: 'UD新ゴ M', sans-serif;
+  font-size: min(1.6vw, 24px);
+  line-height: 1;
+  color: #fff;
+  background-color: #0065a9;
+  border-radius: min(0.4vw, 5px);
+  box-shadow: 0 6px 0 #0098ff;
+  transition: all 0.3s;
+}
+
+.tweet_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 273px;
+  height: 48px;
+  margin: auto;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 24px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  .icon_wrapper {
+    padding-left: 4px;
+  }
+}
