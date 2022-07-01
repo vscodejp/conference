@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const terms = fs.readFileSync(process.cwd() + '/apps/2021-app/src/docs/privacy-policy.md', 'utf8')
+  const terms = fs.readFileSync(process.cwd() + '/libs/shared/docs/privacy-policy.md', 'utf8')
   return {
     props: {
       terms: terms,

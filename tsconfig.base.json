@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@conference/shared/docs": [
+        "libs/shared/docs/code-for-conduct.md",
+        "libs/shared/docs/privacy-policy.md"
+      ],
       "@conference/shared/types": [
         "libs/shared/types/basic.d.ts",
         "libs/shared/types/session.d.ts"
