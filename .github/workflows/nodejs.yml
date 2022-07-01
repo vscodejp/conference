@@ -1,12 +1,12 @@
-name: Deploy to Github pages
+name: Node.js CI
 
 on:
-  push:
-    branches:
-      - main
-  #  pull_request:
+  #  push:
   #    branches:
   #      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-deploy:
@@ -36,25 +36,9 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Transpile
+      - name: Lint
         run: |
           npm install
-          npm run 2021-app:build
+          npm run 2021-app:lint
         env:
           CI: true
-          URL_PREFIX: conference
-          GITHUB_PAGES: true
-
-      # `_` から始まるディレクトリが見えず 404 となってしまう対策を追加
-      - name: Export
-        run: |
-          npm run 2021-app:export
-          touch dist/apps/2021-app/exported/.nojekyll
-          rm -rf docs/2021
-          mv dist/apps/2021-app/exported docs/2021
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
