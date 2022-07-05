@@ -1,0 +1,7 @@
+[context.deploy-preview.environment]
+NODE_VERSION = '16.14.0'
+NODE_ENV = 'development'
+
+[build]
+publish = "dist/"
+command = "npm install && npm run 2021-app:build && npm run 2021-app:export"
