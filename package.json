@@ -27,6 +27,7 @@
     "ts-node": "10.3.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "4.11.1",
     "@nrwl/cli": "14.3.6",
     "@nrwl/cypress": "14.3.6",
     "@nrwl/eslint-plugin-nx": "14.3.6",
