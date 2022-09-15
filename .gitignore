@@ -13,6 +13,7 @@ yarn.lock
 # next.js
 /.next/
 /apps/2021-app/.next
+/apps/2023-app/.next
 /out/
 /dist/
 
@@ -20,6 +21,7 @@ yarn.lock
 /build
 
 /docs/2021
+/docs/2023
 !/docs/.gitkeep
 
 # misc
@@ -47,6 +49,15 @@ yarn-error.log*
 
 /.swc
 /apps/2021-app/.swc
+/apps/2023-app/.swc
+
+# remove service workers, will be present when running `npm run build`.
+apps/2023-app/public/*.js
+apps/2023-app/public/*.js.map
+apps/2023-app/public/sitemap.xml
+
+#apps/2023-app/public/og/*.jpg
+#!apps/2023-app/public/og/top.jpg
 
 apps/2021-app/public/*.js
 apps/2021-app/public/*.js.map

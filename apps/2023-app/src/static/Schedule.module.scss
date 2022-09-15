@@ -1,0 +1,134 @@
+.section {
+  width: min(79.06296vw, 1080px);
+
+  @apply ml-auto mr-auto pt-2;
+}
+
+@media screen and (min-width: 600px) {
+  .schedule {
+    grid-template-rows:
+      [tracks] auto
+      [time-1300] 1fr
+      [time-1320] auto
+      [time-1330] 1fr
+      [time-1400] auto
+      [time-1410] 1fr
+      [time-1425] 1fr
+      [time-1440] auto
+      [time-1450] 1fr
+      [time-1520] auto
+      [time-1530] 1fr
+      [time-1600] auto
+      [time-1610] 1fr
+      [time-1640] auto
+      [time-1650] 1fr;
+    grid-template-columns:
+      [times] 4em
+      [track1-start] 1fr
+      [track1-end track2-end] 1fr;
+    grid-gap: 1em;
+    //[track1-end track2-start] 1fr
+    //[track2-end track3-start] 1fr
+    //[track3-end track4-start] 1fr
+    //[track4-end];
+    @apply grid;
+  }
+}
+
+.trackslot {
+  @apply hidden;
+}
+
+.timeslot {
+  grid-column: times;
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 600px) {
+    .trackslot {
+      @apply bg-sub_light block pt-2 pb-1 px-1 sticky top-0 z-30;
+    }
+  }
+}
+
+.session {
+  @apply p-1.5 rounded text-2xl shadow-session mb-px;
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 600px) {
+    .session {
+      @apply m-0;
+    }
+  }
+}
+
+.sessionTitle,
+.sessionTime,
+.sessionTrack,
+.sessionPresenter {
+  @apply block text-lg;
+}
+
+.sessionTitle,
+.timeslot {
+  @apply m-0 text-xl;
+}
+
+.sessionTitle {
+  height: 8em;
+  min-height: 80px !important;
+
+  @apply leading-6 flex-col justify-start text-xl;
+}
+
+.sessionTime {
+  @apply text-lg;
+}
+
+.sessionTitle p {
+  @apply text-white decoration-dotted;
+}
+
+.trackslot,
+.timeslot {
+  @apply text-dark font-bold text-lg;
+}
+
+.rest {
+  @apply text-dark bg-sub_light text-lg flex items-center justify-center align-middle;
+}
+
+.track1 {
+  @apply bg-detail1 text-white;
+}
+
+.track2 {
+  @apply bg-detail2 text-white;
+}
+
+.track3 {
+  @apply bg-detail3 text-white;
+}
+
+.track4 {
+  @apply bg-detail4 text-white;
+}
+
+.allTrack {
+  background: #ccc;
+
+  @apply text-dark shadow-none flex justify-center items-center;
+}
+
+.text {
+  @apply max-w-5xl text-lg mt-0 mb-2.5 mx-auto;
+}
+
+.meta {
+  @apply text-sub_dark italic;
+}
+
+.meta a {
+  @apply text-sub_dark;
+}

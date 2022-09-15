@@ -8,7 +8,11 @@
     "2021-app:dev": "nx run 2021-app:serve",
     "2021-app:build": "nx run 2021-app:build",
     "2021-app:export": "nx run 2021-app:export",
-    "2021-app:lint": "nx run 2021-app:lint"
+    "2021-app:lint": "nx run 2021-app:lint",
+    "2023-app:dev": "nx run 2023-app:serve",
+    "2023-app:build": "nx run 2023-app:build",
+    "2023-app:export": "nx run 2023-app:export",
+    "2023-app:lint": "nx run 2023-app:lint"
   },
   "dependencies": {
     "@headlessui/react": "1.6.5",

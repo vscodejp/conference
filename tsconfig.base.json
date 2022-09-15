@@ -20,8 +20,7 @@
         "libs/shared/docs/privacy-policy.md"
       ],
       "@conference/shared/types": [
-        "libs/shared/types/basic.d.ts",
-        "libs/shared/types/session.d.ts"
+        "libs/shared/types/index.ts"
       ]
     }
   },
