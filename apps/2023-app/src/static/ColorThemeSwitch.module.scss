@@ -1,0 +1,23 @@
+.switch input {
+  @apply absolute left-0 top-0 w-full h-full z-10 cursor-pointer opacity-0;
+}
+
+.switch {
+  @apply relative;
+
+  label {
+    @apply bg-light w-12 h-6 relative inline-block rounded-full box-border duration-300;
+
+    &::after {
+      @apply bg-light w-6 h-6 absolute content-empty rounded-full left-0 top-0 shadow-theme_switch duration-300 z-10;
+    }
+  }
+}
+
+.switch input:checked + label {
+  @apply bg-primary;
+
+  &::after {
+    @apply left-6;
+  }
+}

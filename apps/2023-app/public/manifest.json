@@ -1,0 +1,16 @@
+{
+  "name": "VS Code Conference JP 2023",
+  "short_name": "vscodecon.jp 2023",
+  "icons": [
+    {
+      "src": "icons/vscodejp.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    }
+  ],
+  "Scope": "/conference/",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#000",
+  "background_color": "#000"
+}
