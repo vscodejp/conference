@@ -1,4 +1,4 @@
-import { ISession, TrackID, TrackName } from '../../../../libs/shared/types/session'
+import { ISession, TrackID, TrackName } from '@conference/shared/types'
 
 export const tracks: TrackID[] = ['track1', 'track2']
 

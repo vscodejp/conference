@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import i18next from 'i18next'
-import '../../i18n.init'
-import { urlPrefix } from '../utils/urlPath'
+import 'root/i18n.init'
+import { urlPrefix } from '@utils/urlPath'
 
-import { ColorThemeProvider } from '../lib/ColorThemeContext'
+import { ColorThemeProvider } from '@lib/ColorThemeContext'
 
 import '../static/globals.scss'
 

@@ -1,4 +1,5 @@
-import { FC, createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect } from 'react'
+import { FC } from 'root/react-app-env'
 
 import { themeColors } from './constants'
 

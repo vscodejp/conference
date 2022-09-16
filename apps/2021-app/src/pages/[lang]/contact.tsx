@@ -1,10 +1,10 @@
 import i18next from 'i18next'
 import styles from '../../static/Home.module.scss'
 
-import { ButtonElement } from '../../components/ButtonElement'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import { defaultLanguage, languages } from '../../../i18n.config'
+import { ButtonElement } from '@components/ButtonElement'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import { defaultLanguage, languages } from 'root/i18n.config'
 
 export default function Home() {
   return (

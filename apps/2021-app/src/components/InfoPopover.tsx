@@ -1,11 +1,12 @@
-import { FC, useContext, useMemo } from 'react'
+import { FC } from 'root/react-app-env'
+import { useContext, useMemo } from 'react'
 import { Popover } from '@headlessui/react'
 import i18next from 'i18next'
 import { DetailIcon } from './Icon'
 import popoverStyles from '../static/Popover.module.scss'
 import tagStyles from '../static/Tag.module.scss'
-import { ColorThemeContext } from '../lib/ColorThemeContext'
-import { ITrack } from '../../../../libs/shared/types/session'
+import { ColorThemeContext } from '@lib/ColorThemeContext'
+import { ITrack } from '@conference/shared/types'
 
 interface InfoPopover {
   track: ITrack

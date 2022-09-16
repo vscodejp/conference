@@ -1,17 +1,18 @@
-import React from 'react'
+import { useEffect, useRef } from 'react'
+import { FC } from 'root/react-app-env'
 import Link from 'next/link'
 import i18next from 'i18next'
 import styles from '../static/Header.module.scss'
-import { conferenceName } from '../utils/constants'
+import { conferenceName } from '@utils/constants'
 
 import { ColorThemeSwitch } from './ColorThemeSwitch'
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   const lang = i18next.language.substring(0, 2)
 
-  const ref = React.useRef<HTMLDivElement | any>()
+  const ref = useRef<HTMLDivElement | any>()
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.onscroll = function updateNav() {
       if (isPageOffset()) {
         ref.current?.classList.add(styles.navActive)

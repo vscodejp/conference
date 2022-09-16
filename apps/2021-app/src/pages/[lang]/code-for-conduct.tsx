@@ -3,11 +3,11 @@ import ReactMarkdown from 'react-markdown'
 import * as fs from 'fs'
 import styles from '../../static/Home.module.scss'
 
-import { ButtonElement } from '../../components/ButtonElement'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import { defaultLanguage, languages } from '../../../i18n.config'
-import { urlPrefix } from '../../utils/urlPath'
+import { ButtonElement } from '@components/ButtonElement'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import { defaultLanguage, languages } from 'root/i18n.config'
+import { urlPrefix } from '@utils/urlPath'
 
 export default function Home({ terms }) {
   return (

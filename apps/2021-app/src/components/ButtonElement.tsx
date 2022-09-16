@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import styles from '../static/Button.module.scss'
 import { TwitterLightIcon } from './Icon'
 
@@ -11,7 +11,7 @@ export const ButtonElement = ({
   path: string
   tooltip: string
   isExternalLink?: boolean
-  children: React.ReactNode
+  children: ReactNode
 }) => {
   return (
     <a
@@ -38,7 +38,7 @@ export const TweetButtonElement = ({
   tooltip: string
   isExternalLink?: boolean
   showSpaces?: boolean
-  children: React.ReactNode
+  children: ReactNode
 }) => {
   return (
     <a
