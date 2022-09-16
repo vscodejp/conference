@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
-import ColorThemeScript from '../lib/ColorThemeScript'
+import ColorThemeScript from '@lib/ColorThemeScript'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {}

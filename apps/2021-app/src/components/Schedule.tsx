@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 import timetableStyles from '../static/Schedule.module.scss'
 import { InfoPopover } from './InfoPopover'
 import { tracks, trackNames, sessions } from '../contents/sessions'
-import { formatTime } from '../utils/dateTime'
-import { capitalizeFirstCharacter } from '../utils/text'
+import { formatTime } from '@utils/dateTime'
+import { capitalizeFirstCharacter } from '@utils/text'
 
 const Schedule: FC = () => {
   return (

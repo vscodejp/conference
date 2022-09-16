@@ -1,7 +1,8 @@
-import { FC, ChangeEvent, useContext } from 'react'
+import { ChangeEvent, useContext } from 'react'
+import { FC } from 'root/react-app-env'
 import styles from '../static/ColorThemeSwitch.module.scss'
 
-import { ColorThemeContext } from '../lib/ColorThemeContext'
+import { ColorThemeContext } from '@lib/ColorThemeContext'
 
 export const ColorThemeSwitch: FC = () => {
   const colorTheme = useContext(ColorThemeContext)

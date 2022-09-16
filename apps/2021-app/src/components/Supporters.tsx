@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'root/react-app-env'
 import { supporters } from '../contents/supporters'
 import People from './People'
 

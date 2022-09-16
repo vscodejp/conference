@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { FC } from 'root/react-app-env'
 import Link from 'next/link'
 import i18next from 'i18next'
 import styles from '../static/Footer.module.scss'
-import { organizationName } from '../utils/constants'
+import { organizationName } from '@utils/constants'
 
 const Footer: FC = () => {
   const lang = i18next.language.substring(0, 2)

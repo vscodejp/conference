@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC } from 'root/react-app-env'
 // import Image from 'next/image'
 import styles from '../static/Concept.module.scss'
-import { urlPrefix } from '../utils/urlPath'
+import { urlPrefix } from '@utils/urlPath'
 
 const Concept: FC = () => {
   return (
