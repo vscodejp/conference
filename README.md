@@ -5,6 +5,9 @@
 You can be launched
 
 ```bash
+# 2023
+yarn 2023-app:dev
+
 # 2021
 yarn 2021-app:dev
 ```
