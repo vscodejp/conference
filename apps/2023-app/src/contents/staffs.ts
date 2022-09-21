@@ -64,4 +64,9 @@ export const staffs = [
     url: 'https://twitter.com/nabemasat',
     iconName: 'https://pbs.twimg.com/profile_images/1441365681589522450/_L0iO1Wi_400x400.jpg',
   },
+  {
+    name: 'Sho Sato',
+    url: 'https://twitter.com/csshooo',
+    iconName: 'https://pbs.twimg.com/profile_images/1220641936060473344/cjRgaPJl_400x400.jpg',
+  },
 ]
