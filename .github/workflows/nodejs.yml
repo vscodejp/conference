@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '16.x'
 
+      # Not working
+      # - uses: nrwl/nx-set-shas@v3
+
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -38,8 +41,8 @@ jobs:
 
       - name: Lint
         run: |
-          npm install
-          npm run 2021-app:lint
-          npm run 2023-app:lint
+          npm ci
+          npx nx run 2021-app:lint
+          npx nx run 2023-app:lint
         env:
           CI: true
