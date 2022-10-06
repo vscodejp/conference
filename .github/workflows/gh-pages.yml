@@ -24,7 +24,8 @@ jobs:
         with:
           node-version: '16.x'
 
-      - uses: nrwl/nx-set-shas@v3
+      # Not working
+      # - uses: nrwl/nx-set-shas@v3
 
       - name: Cache node modules
         uses: actions/cache@v2
