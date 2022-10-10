@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+bash ./bin/imagemin
+npm run 2021-app:lint
+npm run 2023-app:lint
