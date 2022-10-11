@@ -2,7 +2,7 @@ import i18next from 'i18next'
 import ReactMarkdown from 'react-markdown'
 import * as fs from 'fs'
 
-import { ButtonElement } from '@components/modules/ButtonElement'
+import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
 import FooterSection from '@components/FooterSection'
 import { defaultLanguage, languages } from 'root/i18n.config'
@@ -20,9 +20,9 @@ export default function Home({ terms }) {
           <ReactMarkdown skipHtml={false}>{terms}</ReactMarkdown>
         </div>
 
-        <ButtonElement path={urlPrefix} tooltip={i18next.t('back_to_top')}>
+        <Button path={urlPrefix} tooltip={i18next.t('back_to_top')}>
           {i18next.t('back_to_top')}
-        </ButtonElement>
+        </Button>
       </main>
 
       <FooterSection />

@@ -1,7 +1,7 @@
 import i18next from 'i18next'
 import styles from '../../static/Home.module.scss'
 
-import { ButtonElement } from '@components/ButtonElement'
+import { Button } from '@conference/shared/ui'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import { defaultLanguage, languages } from 'root/i18n.config'
@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className={styles.title}>{i18next.t('contact')}</h1>
 
         <div className={styles.content}>
-          <ButtonElement
+          <Button
             path={
               'https://docs.google.com/forms/d/e/1FAIpQLSeDsAlBwncykjmyia0Z-7W-1IMIPHBGZisRZJT_KZ8J8y6rRQ/viewform'
             }
@@ -23,7 +23,7 @@ export default function Home() {
             isExternalLink
           >
             {i18next.t('there_is_google_form')}
-          </ButtonElement>
+          </Button>
         </div>
       </main>
 

@@ -16,6 +16,7 @@
     "2023-app:lint": "nx run 2023-app:lint"
   },
   "dependencies": {
+    "@emotion/css": "11.10.0",
     "@headlessui/react": "1.6.5",
     "@nrwl/next": "14.8.1",
     "dayjs": "1.11.3",
