@@ -1,4 +1,6 @@
-.button {
+import { css } from '@emotion/css'
+
+export const button = css`
   position: relative;
   display: inline-flex;
   flex-flow: column;
@@ -14,9 +16,9 @@
   border-radius: min(0.4vw, 5px);
   box-shadow: 0 6px 0 #0098ff;
   transition: all 0.3s;
-}
+`
 
-.tweet_button {
+export const tweetButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,4 +36,4 @@
   .icon_wrapper {
     padding-left: 4px;
   }
-}
+`

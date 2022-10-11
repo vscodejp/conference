@@ -21,6 +21,9 @@
       ],
       "@conference/shared/types": [
         "libs/shared/types/index.ts"
+      ],
+      "@conference/shared/ui": [
+        "libs/shared/ui/index.ts"
       ]
     }
   },

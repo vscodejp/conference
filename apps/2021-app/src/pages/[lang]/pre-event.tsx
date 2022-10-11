@@ -1,7 +1,7 @@
 import i18next from 'i18next'
 import styles from '../../static/Home.module.scss'
 
-import { ButtonElement } from '@components/ButtonElement'
+import { Button } from '@conference/shared/ui'
 import Header from '@components/Header'
 import { PreEventPlayer } from '@components/Player'
 import Footer from '@components/Footer'
@@ -16,9 +16,9 @@ export default function Home() {
         <PreEventPlayer />
       </main>
 
-      <ButtonElement path={urlPrefix} tooltip={i18next.t('back_to_top')}>
+      <Button path={urlPrefix} tooltip={i18next.t('back_to_top')}>
         {i18next.t('back_to_top')}
-      </ButtonElement>
+      </Button>
 
       <Footer />
     </div>
