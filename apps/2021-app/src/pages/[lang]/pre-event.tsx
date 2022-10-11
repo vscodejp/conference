@@ -2,15 +2,15 @@ import i18next from 'i18next'
 import styles from '../../static/Home.module.scss'
 
 import { Button } from '@conference/shared/ui'
-import Header from '@components/Header'
-import { PreEventPlayer } from '@components/Player'
-import Footer from '@components/Footer'
+import NavSection from '@components/NavSection'
+import { PreEventPlayer } from '@components/PlayerSection'
+import FooterSection from '@components/FooterSection'
 import { urlPrefix } from '@utils/urlPath'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header />
+      <NavSection />
 
       <main className={styles.main}>
         <PreEventPlayer />
@@ -20,7 +20,7 @@ export default function Home() {
         {i18next.t('back_to_top')}
       </Button>
 
-      <Footer />
+      <FooterSection />
     </div>
   )
 }

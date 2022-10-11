@@ -1,9 +1,9 @@
 import { FC } from 'root/react-app-env'
 import { supporters } from '../contents/supporters'
-import People from './People'
+import People from './modules/People'
 
-const Supporters: FC = () => {
+const SupporterSection: FC = () => {
   return <People people={supporters} sectionName="supporters" />
 }
 
-export default Supporters
+export default SupporterSection

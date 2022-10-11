@@ -1,6 +1,6 @@
 import { ChangeEvent, useContext } from 'react'
 import { FC } from 'root/react-app-env'
-import styles from '../static/ColorThemeSwitch.module.scss'
+import styles from '../../static/ColorThemeSwitch.module.scss'
 
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 

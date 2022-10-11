@@ -2,7 +2,7 @@ import { FC } from 'root/react-app-env'
 import { useMemo } from 'react'
 import i18next from 'i18next'
 // import Image from 'next/image'
-import styles from '../static/Staff.module.scss'
+import styles from '../../static/Staff.module.scss'
 
 interface PersonInformation {
   name: string

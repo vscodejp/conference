@@ -5,9 +5,9 @@ import i18next from 'i18next'
 import styles from '../static/Header.module.scss'
 import { conferenceName } from '@utils/constants'
 
-import { ColorThemeSwitch } from './ColorThemeSwitch'
+import { ColorThemeSwitch } from './modules/ColorThemeSwitch'
 
-const Header: FC = () => {
+const NavSection: FC = () => {
   const lang = i18next.language.substring(0, 2)
 
   const ref = useRef<HTMLDivElement | any>()
@@ -39,7 +39,7 @@ const Header: FC = () => {
         <nav className={styles.links}>
           <Link href={`/${lang}/#about`}>
             <a
-              aria-label="Link to About"
+              aria-label="Link to AboutSection"
               aria-describedby={i18next.t('about')}
               className={styles.link}
             >
@@ -48,7 +48,7 @@ const Header: FC = () => {
           </Link>
           <Link href={`/${lang}/#timetable`}>
             <a
-              aria-label="Link to Timetable"
+              aria-label="Link to TimetableSection"
               aria-describedby={i18next.t('timetable')}
               className={styles.link}
             >
@@ -57,7 +57,7 @@ const Header: FC = () => {
           </Link>
           <Link href={`/${lang}/#staffs`}>
             <a
-              aria-label="Link to Staffs"
+              aria-label="Link to StaffSection"
               aria-describedby={i18next.t('staffs')}
               className={styles.link}
             >
@@ -67,7 +67,7 @@ const Header: FC = () => {
           <Link href={`/${lang}/#supporters`}>
             <a
               aria-label="link to Aupporters"
-              aria-describedby="Supporters"
+              aria-describedby="SupporterSection"
               className={styles.link}
             >
               {i18next.t('supporters')}
@@ -87,4 +87,4 @@ const Header: FC = () => {
   )
 }
 
-export default Header
+export default NavSection

@@ -2,10 +2,10 @@ import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 import styles from '../static/Section.module.scss'
 
-const About: FC = () => {
+const AboutSection: FC = () => {
   return (
     <section id={'about'} className={styles.section}>
-      <h2>{'About'}</h2>
+      <h2>{'AboutSection'}</h2>
       <div className={styles.detail}>
         <dl>
           <dt>{i18next.t('date_and_time')}</dt>
@@ -37,4 +37,4 @@ const About: FC = () => {
   )
 }
 
-export default About
+export default AboutSection
