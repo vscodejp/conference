@@ -4,7 +4,7 @@ import i18next from 'i18next'
 import styles from '../static/Footer.module.scss'
 import { organizationName } from '@utils/constants'
 
-const Footer: FC = () => {
+const FooterSection: FC = () => {
   const lang = i18next.language.substring(0, 2)
   return (
     <footer className={styles.footer}>
@@ -37,4 +37,4 @@ const Footer: FC = () => {
   )
 }
 
-export default Footer
+export default FooterSection

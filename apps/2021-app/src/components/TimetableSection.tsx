@@ -4,7 +4,7 @@ import styles from '../static/Section.module.scss'
 
 import Schedule from './Schedule'
 
-const Timetable: FC = () => {
+const TimetableSection: FC = () => {
   return (
     <section id={'timetable'} className={styles.section}>
       <h2>{i18next.t('timetable')}</h2>
@@ -13,4 +13,4 @@ const Timetable: FC = () => {
   )
 }
 
-export default Timetable
+export default TimetableSection

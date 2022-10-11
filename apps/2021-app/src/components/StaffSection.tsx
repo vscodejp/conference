@@ -1,9 +1,9 @@
 import { FC } from 'root/react-app-env'
 import { staffs } from '../contents/staffs'
-import People from './People'
+import People from './modules/People'
 
-const Staffs: FC = () => {
+const StaffSection: FC = () => {
   return <People people={staffs} sectionName="staffs" />
 }
 
-export default Staffs
+export default StaffSection

@@ -2,14 +2,14 @@ import i18next from 'i18next'
 import styles from '../../static/Home.module.scss'
 
 import { Button } from '@conference/shared/ui'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import NavSection from '@components/NavSection'
+import FooterSection from '@components/FooterSection'
 import { defaultLanguage, languages } from 'root/i18n.config'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header />
+      <NavSection />
 
       <main className={styles.main}>
         <h1 className={styles.title}>{i18next.t('contact')}</h1>
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer />
+      <FooterSection />
     </div>
   )
 }

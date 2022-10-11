@@ -3,7 +3,7 @@ import i18next from 'i18next'
 import { TweetButton } from '@conference/shared/ui'
 import styles from '../static/Social.module.scss'
 
-export const Social = () => {
+export const SocialSection = () => {
   return (
     <>
       <div className={styles.social_wrapper}>

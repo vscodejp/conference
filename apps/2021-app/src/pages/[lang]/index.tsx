@@ -3,18 +3,18 @@ import Head from 'next/head'
 import styles from '../../static/Home.module.scss'
 
 import SEO from '@components/SEO'
-import Header from '@components/Header'
-import Concept from '@components/Concept'
-import About from '@components/About'
-import { MainEventPlayer } from '@components/Player'
-import Timetable from '@components/Timetable'
-import Staffs from '@components/Staffs'
-import Supporters from '@components/Supporters'
-import Footer from '@components/Footer'
+import NavSection from '@components/NavSection'
+import ConceptSection from '@components/ConceptSection'
+import AboutSection from '@components/AboutSection'
+import { MainEventPlayer } from '@components/PlayerSection'
+import TimetableSection from '@components/TimetableSection'
+import StaffSection from '@components/StaffSection'
+import SupporterSection from '@components/SupporterSection'
+import FooterSection from '@components/FooterSection'
 import { conferenceName } from '@utils/constants'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import { urlPrefix } from '@utils/urlPath'
-import { Social } from '@components/Social'
+import { SocialSection } from '@components/SocialSection'
 
 export default function Home() {
   return (
@@ -26,19 +26,19 @@ export default function Home() {
           <link rel="icon" href={`${urlPrefix}/favicon.ico`} />
         </Head>
 
-        <Header />
+        <NavSection />
 
         <main className={styles.main}>
-          <Concept />
-          <Social />
-          <About />
+          <ConceptSection />
+          <SocialSection />
+          <AboutSection />
           <MainEventPlayer />
-          <Timetable />
-          <Staffs />
-          <Supporters />
+          <TimetableSection />
+          <StaffSection />
+          <SupporterSection />
         </main>
 
-        <Footer />
+        <FooterSection />
       </div>
     </>
   )
