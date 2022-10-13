@@ -1,8 +1,11 @@
 import { FC } from 'root/react-app-env'
+import dynamic from 'next/dynamic'
 import i18next from 'i18next'
-import ReactPlayer from 'react-player/lazy'
 import styles from '../static/Home.module.scss'
 import playerStyles from '../static/Player.module.scss'
+
+// https://github.com/cookpete/react-player/issues/1474#issuecomment-1184645105
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
 export const PreEventPlayer: FC = () => {
   return (
