@@ -1,4 +1,5 @@
 import { FC } from 'root/react-app-env'
+import { Fragment } from 'react'
 import i18next from 'i18next'
 import timetableStyles from '../static/Schedule.module.scss'
 import { InfoPopover } from './modules/InfoPopover'
@@ -9,7 +10,7 @@ import { capitalizeFirstCharacter } from '@utils/text'
 const Schedule: FC = () => {
   return (
     <div className={timetableStyles.schedule} aria-labelledby={'schedule-heading'}>
-      <>
+      <Fragment>
         {tracks.map((track: string, val: number) => {
           return (
             <span
@@ -22,14 +23,13 @@ const Schedule: FC = () => {
             </span>
           )
         })}
-      </>
+      </Fragment>
 
-      <>
+      <Fragment>
         {sessions.map((session, index) => {
           return (
-            <>
+            <Fragment key={index}>
               <h2
-                key={index}
                 className={timetableStyles.timeslot}
                 aria-hidden={'true'}
                 style={{ gridRow: `time-${session.startTime}` }}
@@ -38,10 +38,9 @@ const Schedule: FC = () => {
               </h2>
               {session.tracks.map((track, key) => {
                 return (
-                  <>
+                  <Fragment key={key}>
                     {track.isEmpty && track.isRest && (
                       <div
-                        key={key}
                         className={`${timetableStyles.session} ${timetableStyles.rest}`}
                         aria-hidden={'true'}
                         style={{
@@ -53,11 +52,10 @@ const Schedule: FC = () => {
                       </div>
                     )}
                     {!track.isEmpty && !track.isRest && !track.hasOwnProperty('presenterName') && (
-                      <div key={key} />
+                      <div />
                     )}
                     {!track.isEmpty && !track.isRest && track.hasOwnProperty('presenterName') && (
                       <div
-                        key={key}
                         className={`${timetableStyles.session} ${timetableStyles.track1}`}
                         style={{
                           gridColumn: track.trackId,
@@ -67,25 +65,25 @@ const Schedule: FC = () => {
                         <InfoPopover track={track} />
                         <h3 className={timetableStyles.sessionTitle}>
                           <div>
-                            <p>{track.presenterTitle}</p>
+                            <div>{track.presenterTitle}</div>
                           </div>
                         </h3>
                         <h4 className={timetableStyles.sessionTime}>
                           {`${formatTime(session.startTime)} - ${formatTime(session.endTime)}`}
                         </h4>
-                        <p className={timetableStyles.sessionPresenter}>
+                        <div className={timetableStyles.sessionPresenter}>
                           {capitalizeFirstCharacter(track.personType)}
                           {track.presenterLevel && ` / ${i18next.t(track.presenterLevel)}`}
-                        </p>
+                        </div>
                       </div>
                     )}
-                  </>
+                  </Fragment>
                 )
               })}
-            </>
+            </Fragment>
           )
         })}
-      </>
+      </Fragment>
     </div>
   )
 }
