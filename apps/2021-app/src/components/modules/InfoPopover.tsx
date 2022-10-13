@@ -7,6 +7,7 @@ import popoverStyles from '../../static/Popover.module.scss'
 import tagStyles from '../../static/Tag.module.scss'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { ITrack } from '@conference/shared/types'
+import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 interface InfoPopover {
   track: ITrack
@@ -14,6 +15,7 @@ interface InfoPopover {
 
 export const InfoPopover: FC<InfoPopover> = ({ track }) => {
   const colorTheme = useContext(ColorThemeContext)
+  const { mounted } = useHeadlessPatch()
 
   const contentStyles = useMemo(() => {
     return colorTheme.colorMode === 'dark'
@@ -29,15 +31,17 @@ export const InfoPopover: FC<InfoPopover> = ({ track }) => {
           <DetailIcon />
         </Popover.Button>
       )}
-      <Popover.Panel className={popoverStyles.popover_content} style={contentStyles}>
-        <h4>{track.presenterTitle}</h4>
-        <h5 className={popoverStyles.align_right}>{track.presenterName}</h5>
-        <p>{track.presenterLive && <div className={tagStyles.tag}>{'Live'}</div>}</p>
-        <h6>{i18next.t('bio')}</h6>
-        <p dangerouslySetInnerHTML={{ __html: track.presenterBio }} />
-        <h6>{i18next.t('session_description')}</h6>
-        <p dangerouslySetInnerHTML={{ __html: track.presenterDescription }} />
-      </Popover.Panel>
+      {mounted && (
+        <Popover.Panel className={popoverStyles.popover_content} style={contentStyles}>
+          <h4>{track.presenterTitle}</h4>
+          <h5 className={popoverStyles.align_right}>{track.presenterName}</h5>
+          <p>{track.presenterLive && <div className={tagStyles.tag}>{'Live'}</div>}</p>
+          <h6>{i18next.t('bio')}</h6>
+          <p dangerouslySetInnerHTML={{ __html: track.presenterBio }} />
+          <h6>{i18next.t('session_description')}</h6>
+          <p dangerouslySetInnerHTML={{ __html: track.presenterDescription }} />
+        </Popover.Panel>
+      )}
     </Popover>
   )
 }

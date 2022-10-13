@@ -5,6 +5,7 @@ import i18next from 'i18next'
 import { DetailIcon } from './Icon'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { ITrack } from '@conference/shared/types'
+import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 interface InfoPopover {
   track: ITrack
@@ -12,6 +13,7 @@ interface InfoPopover {
 
 export const InfoPopover: FC<InfoPopover> = ({ track }) => {
   const colorTheme = useContext(ColorThemeContext)
+  const { mounted } = useHeadlessPatch()
 
   const contentStyles = useMemo(() => {
     return colorTheme.colorMode === 'dark'
@@ -29,26 +31,28 @@ export const InfoPopover: FC<InfoPopover> = ({ track }) => {
           </div>
         </Popover.Button>
       )}
-      <Popover.Panel
-        className="translate-[0, 10px] absolute left-0 p-6 w-auto shadow-popover z-30"
-        style={contentStyles}
-      >
-        <h4 className="flex items-start justify-start">{track.presenterTitle}</h4>
-        <h5 className="text-right">{track.presenterName}</h5>
-        <p className="p-0 m-0">
-          {track.presenterLive && (
-            <div className="border border-solid border-error to-transparent inline-block px-1.5 mr-2 text-lg font-medium leading-4 rounded">
-              {'Live'}
-            </div>
-          )}
-        </p>
-        <h6 style={{ borderLeft: 'solid 5px rgba(0, 122, 204, 1)' }}>{i18next.t('bio')}</h6>
-        <p className="p-0 m-0" dangerouslySetInnerHTML={{ __html: track.presenterBio }} />
-        <h6 style={{ borderLeft: 'solid 5px rgba(0, 122, 204, 1)' }}>
-          {i18next.t('session_description')}
-        </h6>
-        <p className="p-0 m-0" dangerouslySetInnerHTML={{ __html: track.presenterDescription }} />
-      </Popover.Panel>
+      {mounted && (
+        <Popover.Panel
+          className="translate-[0, 10px] absolute left-0 p-6 w-auto shadow-popover z-30"
+          style={contentStyles}
+        >
+          <h4 className="flex items-start justify-start">{track.presenterTitle}</h4>
+          <h5 className="text-right">{track.presenterName}</h5>
+          <p className="p-0 m-0">
+            {track.presenterLive && (
+              <div className="border border-solid border-error to-transparent inline-block px-1.5 mr-2 text-lg font-medium leading-4 rounded">
+                {'Live'}
+              </div>
+            )}
+          </p>
+          <h6 style={{ borderLeft: 'solid 5px rgba(0, 122, 204, 1)' }}>{i18next.t('bio')}</h6>
+          <p className="p-0 m-0" dangerouslySetInnerHTML={{ __html: track.presenterBio }} />
+          <h6 style={{ borderLeft: 'solid 5px rgba(0, 122, 204, 1)' }}>
+            {i18next.t('session_description')}
+          </h6>
+          <p className="p-0 m-0" dangerouslySetInnerHTML={{ __html: track.presenterDescription }} />
+        </Popover.Panel>
+      )}
     </Popover>
   )
 }
