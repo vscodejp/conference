@@ -69,4 +69,9 @@ export const staffs = [
     url: 'https://twitter.com/csshooo',
     iconName: 'https://pbs.twimg.com/profile_images/1220641936060473344/cjRgaPJl_400x400.jpg',
   },
+  {
+    name: 'is_ryo',
+    url: 'https://twitter.com/is_ryo',
+    iconFilename: 'is_ryo.png',
+  },
 ]
