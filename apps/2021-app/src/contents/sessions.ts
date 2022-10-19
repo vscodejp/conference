@@ -8,8 +8,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'inviter',
         presenterName: '藤井太洋',
@@ -22,8 +20,7 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: true,
-        isRest: false,
+        presenterTitle: '',
         trackId: 'track2',
       },
     ],
@@ -33,13 +30,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: false,
+        presenterTitle: '',
         trackId: 'track2',
       },
     ],
@@ -49,8 +44,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: 'Atsushi Morimoto',
@@ -64,8 +57,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'Takekazuomi',
@@ -84,13 +75,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track2',
       },
     ],
@@ -100,8 +89,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: 'kyusque',
@@ -115,8 +102,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'えんでぃ',
@@ -135,8 +120,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: 'miekoma',
@@ -150,8 +133,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'ロフトくん',
@@ -172,13 +153,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track2',
       },
     ],
@@ -188,8 +167,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: 'Ryo Nakamaru',
@@ -203,8 +180,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'Karan Balkar',
@@ -224,13 +199,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track2',
       },
     ],
@@ -240,8 +213,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: 'Kazuya Houdatsu',
@@ -256,8 +227,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'Marcell Endrey',
@@ -277,13 +246,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track2',
       },
     ],
@@ -293,8 +260,6 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         personType: 'presenter',
         presenterName: '松村優大',
@@ -308,8 +273,6 @@ export const sessions: ISession[] = [
         presenterUrl: '',
       },
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track2',
         personType: 'presenter',
         presenterName: 'ypresto',
@@ -329,13 +292,11 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track1',
       },
       {
-        isEmpty: true,
-        isRest: true,
+        presenterTitle: 'Rest',
         trackId: 'track2',
       },
     ],
@@ -345,16 +306,13 @@ export const sessions: ISession[] = [
   {
     tracks: [
       {
-        isEmpty: false,
-        isRest: false,
         trackId: 'track1',
         presenterName: '',
         presenterTitle: 'LT',
         presenterUrl: '',
       },
       {
-        isEmpty: true,
-        isRest: false,
+        presenterTitle: '',
         trackId: 'track2',
       },
     ],
