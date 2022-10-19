@@ -39,7 +39,9 @@ const Schedule: FC = () => {
               {session.tracks.map((track, key) => {
                 return (
                   <Fragment key={key}>
-                    {track.isEmpty && track.isRest && (
+                    {track.presenterTitle === '' ? (
+                      <div />
+                    ) : track.presenterTitle === 'Rest' ? (
                       <div
                         className={`${timetableStyles.session} ${timetableStyles.rest}`}
                         aria-hidden={'true'}
@@ -50,11 +52,7 @@ const Schedule: FC = () => {
                       >
                         {i18next.t('rest_ask_the_speaker')}
                       </div>
-                    )}
-                    {!track.isEmpty && !track.isRest && !track.hasOwnProperty('presenterName') && (
-                      <div />
-                    )}
-                    {!track.isEmpty && !track.isRest && track.hasOwnProperty('presenterName') && (
+                    ) : (
                       <div
                         className={`${timetableStyles.session} ${timetableStyles.track1}`}
                         style={{

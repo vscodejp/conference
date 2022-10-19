@@ -3,12 +3,10 @@ export type TrackName = 'Track A' | 'Track B'
 export type PersonType = 'presenter' | 'inviter'
 
 export interface ITrack {
-  isEmpty: boolean
-  isRest: boolean
   trackId: TrackID
   personType?: PersonType
   presenterName?: string
-  presenterTitle?: string
+  presenterTitle: string
   presenterDescription?: string
   presenterLive?: boolean
   presenterLevel?: 'beginner' | 'intermediate'
