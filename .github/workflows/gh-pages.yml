@@ -43,6 +43,7 @@ jobs:
         run: |
           npm ci
           npx nx run 2021-app:build
+          npx nx run 2023-app:build
         env:
           CI: true
           URL_PREFIX: conference
@@ -52,9 +53,12 @@ jobs:
       - name: Export
         run: |
           npx nx run 2021-app:export
+          npx nx run 2023-app:export
           touch dist/apps/2021-app/exported/.nojekyll
-          rm -rf docs/2021
+          touch dist/apps/2023-app/exported/.nojekyll
+          rm -rf docs/2021 docs/2023
           mv dist/apps/2021-app/exported docs/2021
+          mv dist/apps/2023-app/exported docs/2023
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
