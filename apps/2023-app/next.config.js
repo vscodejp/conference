@@ -47,6 +47,7 @@ module.exports = withPWA(
     trailingSlash: true,
     pwa: {
       dest: 'public',
+      subdomainPrefix: urlPrefix,
       disable: process.env.NODE_ENV !== 'production',
     },
     optimizeImages: false,
