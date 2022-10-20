@@ -74,4 +74,9 @@ export const staffs = [
     url: 'https://twitter.com/is_ryo',
     iconFilename: 'is_ryo.png',
   },
+  {
+    name: 'YuheiFUJITA',
+    url: 'https://twitter.com/Yuhei_FUJITA',
+    iconFilename: 'yuhei_fujita.jpeg',
+  },
 ]
