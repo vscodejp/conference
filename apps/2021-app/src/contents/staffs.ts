@@ -22,7 +22,7 @@ export const staffs = [
   {
     name: 'Aya Tokura',
     url: 'https://twitter.com/ayatokura',
-    iconName: 'https://pbs.twimg.com/profile_images/1379041781623390213/SvPXdZwE_400x400.jpg',
+    iconFilename: 'ayatokura.jpeg',
   },
   {
     name: 'ふじい',
