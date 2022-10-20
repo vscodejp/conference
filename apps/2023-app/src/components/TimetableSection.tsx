@@ -9,8 +9,10 @@ import { capitalizeFirstCharacter } from '@utils/text'
 
 const TimetableSection: FC = () => {
   return (
-    <section id={'timetable'} className="w-10/12 ml-auto mr-auto pt-2">
-      <h2>{i18next.t('timetable')}</h2>
+    <section id={'timetable'} className="w-10/12 ml-auto mr-auto pt-2 flex flex-col gap-4">
+      <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
+        {i18next.t('timetable')}
+      </h2>
       <div className={timetableStyles.schedule} aria-labelledby={'schedule-heading'}>
         <Fragment>
           {tracks.map((track: string, val: number) => {
