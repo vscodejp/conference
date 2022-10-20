@@ -2,8 +2,6 @@
 const withPWA = require('next-pwa')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withOptimizedImages = require('next-optimized-images')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withNx = require('@nrwl/next/plugins/with-nx')
 
 const urlPrefix = process.env.NODE_ENV === 'production' ? '/conference/2023' : ''
 
@@ -40,19 +38,17 @@ const config = {
   experimental: { esmExternals: 'loose' },
 }
 
-module.exports = withNx(
-  withPWA(
-    withOptimizedImages({
-      ...config,
-      assetPrefix: urlPrefix,
-      basePath: urlPrefix,
-      reactStrictMode: true,
-      trailingSlash: true,
-      pwa: {
-        dest: 'public',
-        disable: process.env.NODE_ENV !== 'production',
-      },
-      optimizeImages: false,
-    }),
-  ),
+module.exports = withPWA(
+  withOptimizedImages({
+    ...config,
+    assetPrefix: urlPrefix,
+    basePath: urlPrefix,
+    reactStrictMode: true,
+    trailingSlash: true,
+    pwa: {
+      dest: 'public',
+      disable: process.env.NODE_ENV !== 'production',
+    },
+    optimizeImages: false,
+  }),
 )
