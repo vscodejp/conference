@@ -16,16 +16,19 @@ const ConceptSection: FC = () => {
             <br className="hidden lg:inline-block" />
             {year}
           </h1>
-          <p className="mb-8 leading-relaxed text-gray-300">{i18next.t('explain')}</p>
+          <div className="mb-8 leading-relaxed text-gray-300">{i18next.t('explain')}</div>
           <div className="flex justify-center">
             {APPLY && (
               <Fragment>
-                <button className="inline-flex text-white bg-emphasis border-0 py-2 px-6 focus:outline-none hover:bg-detail4 rounded text-lg">
-                  Button
-                </button>
-                <button className="ml-4 inline-flex text-black bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-100 rounded text-lg">
-                  Button
-                </button>
+                <a
+                  href="https://vscode.connpass.com/event/263206/"
+                  className="inline-flex text-white bg-emphasis border-0 py-2 px-8 focus:outline-none hover:bg-detail4 rounded text-lg"
+                  aria-label={i18next.t('apply_for_participation_from_connpass_form')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {i18next.t('apply_for_participation_from_connpass_form')}
+                </a>
               </Fragment>
             )}
           </div>

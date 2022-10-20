@@ -12,46 +12,23 @@ const AboutSection: FC = () => {
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
             {conferenceNameWithYear}
           </h1>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             {i18next.t('explain')}
-          </p>
-        </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          <div className="p-2 sm:w-1/2 w-full">
-            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-              <img alt="" src="/icons/check.svg" />
-              <span className="title-font font-medium">{i18next.t('november_20_2021')}</span>
-            </div>
-          </div>
-          <div className="p-2 sm:w-1/2 w-full">
-            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-              <img alt="" src="/icons/check.svg" />
-              <span className="title-font font-medium">{i18next.t('online')}</span>
-            </div>
-          </div>
-          <div className="p-2 sm:w-1/2 w-full">
-            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-              <img alt="" src="/icons/check.svg" />
-              <span className="title-font font-medium">{i18next.t('free')}</span>
-            </div>
-          </div>
-          <div className="p-2 sm:w-1/2 w-full">
-            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-              <img alt="" src="/icons/check.svg" />
-              <span className="title-font font-medium">
-                {i18next.t('apply_for_participation_from_connpass_form')}
-              </span>
-            </div>
           </div>
         </div>
         {APPLY && (
           <Fragment>
-            <button className="inline-flex text-white bg-emphasis border-0 py-2 px-6 focus:outline-none hover:bg-detail4 rounded text-lg">
-              Button
-            </button>
-            <button className="ml-4 inline-flex text-black bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-100 rounded text-lg">
-              Button
-            </button>
+            <div className="flex justify-center lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+              <a
+                href="https://vscode.connpass.com/event/263206/"
+                className="inline-flex text-white bg-emphasis border-0 py-4 px-16 focus:outline-none hover:bg-detail4 rounded text-lg"
+                aria-label={i18next.t('apply_for_participation_from_connpass_form')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {i18next.t('apply_for_participation_from_connpass_form')}
+              </a>
+            </div>
           </Fragment>
         )}
       </div>
