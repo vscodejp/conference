@@ -6,6 +6,7 @@ import { conferenceNameWithYear } from '@utils/constants'
 
 import { ColorThemeSwitch } from './modules/ColorThemeSwitch'
 import { DARK } from '@utils/feature'
+import { urlPrefix } from '@utils/urlPath'
 
 const NavSection: FC = () => {
   const ref = useRef<HTMLDivElement | any>()
@@ -30,7 +31,7 @@ const NavSection: FC = () => {
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img alt="" src="/icons/vscodejp.svg" className="w-12" />
+          <img alt="" src={`${urlPrefix}/icons/vscodejp.svg`} className="w-12" />
           <span className="ml-3 text-xl">{conferenceNameWithYear}</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
