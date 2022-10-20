@@ -3,6 +3,7 @@ import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 // import Image from 'next/image'
 import styles from '../../static/Staff.module.scss'
+import { urlPrefix } from '@utils/urlPath'
 
 interface PersonInformation {
   name: string
@@ -32,7 +33,11 @@ export const People: FC<{ people: PersonInformation[]; sectionName: string }> = 
               <a href={person.url} target="_blank" rel="noopener noreferrer">
                 <img
                   alt={`Image ${person.name}`}
-                  src={person?.iconFilename ? `/icons/${person?.iconFilename}` : person?.iconName}
+                  src={
+                    person?.iconFilename
+                      ? `${urlPrefix}/icons/${person?.iconFilename}`
+                      : person?.iconName
+                  }
                 />
                 <div className={styles.info}>
                   <div className={styles.name}>{person.name}</div>
