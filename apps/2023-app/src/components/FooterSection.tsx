@@ -67,7 +67,7 @@ const FooterSection: FC = () => {
             <nav className="list-none mb-10">
               <li>
                 <a
-                  href="https://vscodejp.github.io/conference/2023"
+                  href={`https://vscodejp.github.io/conference/2023/${lang}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
@@ -79,7 +79,7 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href="https://vscodejp.github.io/conference/2021"
+                  href={`https://vscodejp.github.io/conference/2021/${lang}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
