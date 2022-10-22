@@ -1,4 +1,5 @@
-.staffs {
+.staffs,
+.supporters {
   @apply text-xl flex flex-wrap;
 
   .icon {
@@ -22,16 +23,9 @@
   }
 }
 
-.info {
-  @apply w-80 ml-2 text-xl flex items-center align-middle;
-
-  @media screen and (max-width: 600px) {
-    @apply text-xl;
-  }
-}
-
 @media (max-width: 600px) {
-  .staffs {
+  .staffs,
+  .supporters {
     @apply mx-auto flex flex-col;
 
     .icon {
