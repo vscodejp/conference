@@ -3,10 +3,9 @@ import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 import styles from '../static/Header.module.scss'
 import { conferenceNameWithYear } from '@utils/constants'
-
-import { ColorThemeSwitch } from './modules/ColorThemeSwitch'
 import { DARK } from '@utils/feature'
-import { urlPrefix } from '@utils/urlPath'
+import { urlPrefix } from '@utils/endpoints.constants'
+import { ColorThemeSwitch } from './modules/ColorThemeSwitch'
 
 const NavSection: FC = () => {
   const ref = useRef<HTMLDivElement | any>()

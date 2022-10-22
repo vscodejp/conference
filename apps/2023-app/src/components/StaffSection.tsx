@@ -2,8 +2,8 @@ import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 import { useArray } from '@conference/shared/hooks'
 import { AvatarIcon } from '@conference/shared/ui'
-import { staffs } from '../contents/staffs'
-import styles from '../static/Staff.module.scss'
+import { staffs } from '@contents/staffs'
+import styles from '@static/Staff.module.scss'
 
 const StaffSection: FC = () => {
   const { sortArray } = useArray()

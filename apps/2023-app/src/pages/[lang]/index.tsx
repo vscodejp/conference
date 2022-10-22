@@ -14,7 +14,7 @@ import FooterSection from '@components/FooterSection'
 
 import { conferenceNameWithYear } from '@utils/constants'
 import { defaultLanguage, languages } from 'root/i18n.config'
-import { urlPrefix } from '@utils/urlPath'
+import { urlPrefix } from '@utils/endpoints.constants'
 import { PLAYER, SOCIAL, SUPPORTER, TIMETABLE } from '@utils/feature'
 
 export default function Home() {

@@ -1,20 +1,20 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../../static/Home.module.scss'
+import styles from '@static/Home.module.scss'
 
 import SEO from '@components/SEO'
 import NavSection from '@components/NavSection'
 import ConceptSection from '@components/ConceptSection'
+import { SocialSection } from '@components/SocialSection'
 import AboutSection from '@components/AboutSection'
 import { MainEventPlayer } from '@components/PlayerSection'
 import TimetableSection from '@components/TimetableSection'
 import StaffSection from '@components/StaffSection'
 import SupporterSection from '@components/SupporterSection'
 import FooterSection from '@components/FooterSection'
-import { conferenceName } from '@utils/constants'
 import { defaultLanguage, languages } from 'root/i18n.config'
-import { urlPrefix } from '@utils/urlPath'
-import { SocialSection } from '@components/SocialSection'
+import { conferenceName } from '@utils/constants'
+import { urlPrefix } from '@utils/endpoints.constants'
 
 export default function Home() {
   return (

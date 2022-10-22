@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 // import Image from 'next/image'
-import { urlPrefix } from '@utils/urlPath'
+import { urlPrefix } from '@utils/endpoints.constants'
 import { APPLY } from '@utils/feature'
 import { conferenceName, year } from '@utils/constants'
 

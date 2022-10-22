@@ -1,13 +1,15 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
 import i18next from 'i18next'
-import timetableStyles from '../static/Schedule.module.scss'
-import { sessions, trackNames, tracks } from '../contents/sessions'
-import { formatTime } from '@utils/dateTime'
+import { useDateTime, useString } from '@conference/shared/hooks'
+import { sessions, trackNames, tracks } from '@contents/sessions'
+import timetableStyles from '@static/Schedule.module.scss'
 import { InfoPopover } from './modules/InfoPopover'
-import { capitalizeFirstCharacter } from '@utils/text'
 
 const TimetableSection: FC = () => {
+  const { capitalizeFirst } = useString()
+  const { formatTime } = useDateTime()
+
   return (
     <section id={'timetable'} className="w-10/12 ml-auto mr-auto pt-2 flex flex-col gap-4">
       <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
@@ -75,7 +77,7 @@ const TimetableSection: FC = () => {
                               {`${formatTime(session.startTime)} - ${formatTime(session.endTime)}`}
                             </h4>
                             <p className={timetableStyles.sessionPresenter}>
-                              {capitalizeFirstCharacter(track.personType)}
+                              {capitalizeFirst(track.personType)}
                               {track.presenterLevel && ` / ${i18next.t(track.presenterLevel)}`}
                             </p>
                           </div>

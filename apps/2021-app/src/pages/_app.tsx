@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import i18next from 'i18next'
 import 'root/i18n.init'
-import { urlPrefix } from '@utils/urlPath'
 
+import { urlPrefix } from '@utils/endpoints.constants'
 import { ColorThemeProvider } from '@lib/ColorThemeContext'
 
-import '../static/globals.scss'
+import '@static/globals.scss'
 
 const MyApp = ({ Component, pageProps }) => {
   i18next.changeLanguage(pageProps.language)

@@ -1,7 +1,7 @@
 import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
 import { conferenceNameWithYear, organizationName } from '@utils/constants'
-import { urlPrefix } from '@utils/urlPath'
+import { urlPrefix } from '@utils/endpoints.constants'
 
 const FooterSection: FC = () => {
   const lang = i18next.language.substring(0, 2)

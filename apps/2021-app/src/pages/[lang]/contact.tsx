@@ -1,10 +1,10 @@
 import i18next from 'i18next'
-import styles from '../../static/Home.module.scss'
+import { defaultLanguage, languages } from 'root/i18n.config'
 
 import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
 import FooterSection from '@components/FooterSection'
-import { defaultLanguage, languages } from 'root/i18n.config'
+import styles from '@static/Home.module.scss'
 
 export default function Home() {
   return (

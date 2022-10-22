@@ -1,7 +1,7 @@
 import React from 'react'
 import i18next from 'i18next'
 import { TweetButton } from '@conference/shared/ui'
-import styles from '../static/Social.module.scss'
+import styles from '@static/Social.module.scss'
 
 export const SocialSection = () => {
   return (

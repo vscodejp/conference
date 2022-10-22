@@ -1,13 +1,13 @@
 import i18next from 'i18next'
+import { defaultLanguage, languages } from 'root/i18n.config'
 import ReactMarkdown from 'react-markdown'
 import * as fs from 'fs'
-import styles from '../../static/Home.module.scss'
 
 import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
 import FooterSection from '@components/FooterSection'
-import { defaultLanguage, languages } from 'root/i18n.config'
-import { urlPrefix } from '@utils/urlPath'
+import styles from '@static/Home.module.scss'
+import { urlPrefix } from '@utils/endpoints.constants'
 
 export default function Home({ terms }) {
   return (

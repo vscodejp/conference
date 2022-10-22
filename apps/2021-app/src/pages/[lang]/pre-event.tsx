@@ -1,11 +1,11 @@
 import i18next from 'i18next'
-import styles from '../../static/Home.module.scss'
 
 import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
 import { PreEventPlayer } from '@components/PlayerSection'
 import FooterSection from '@components/FooterSection'
-import { urlPrefix } from '@utils/urlPath'
+import styles from '@static/Home.module.scss'
+import { urlPrefix } from '@utils/endpoints.constants'
 
 export default function Home() {
   return (

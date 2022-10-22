@@ -1,9 +1,9 @@
 import i18next from 'i18next'
+import { defaultLanguage, languages } from 'root/i18n.config'
 
 import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
 import FooterSection from '@components/FooterSection'
-import { defaultLanguage, languages } from 'root/i18n.config'
 
 export default function Home() {
   return (

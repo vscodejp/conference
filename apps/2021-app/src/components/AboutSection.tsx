@@ -1,6 +1,6 @@
 import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
-import styles from '../static/Section.module.scss'
+import styles from '@static/Section.module.scss'
 
 const AboutSection: FC = () => {
   return (

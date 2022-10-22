@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { FC } from 'root/react-app-env'
 import Link from 'next/link'
 import i18next from 'i18next'
-import styles from '../static/Header.module.scss'
+import styles from '@static/Header.module.scss'
 import { conferenceName } from '@utils/constants'
 
 import { ColorThemeSwitch } from './modules/ColorThemeSwitch'

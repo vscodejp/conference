@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import i18next from 'i18next'
 import { conferenceName, description } from '@utils/constants'
-import { urlPrefix } from '@utils/urlPath'
+import { urlPrefix } from '@utils/endpoints.constants'
 
 const SEO = () => {
   const router = useRouter()
