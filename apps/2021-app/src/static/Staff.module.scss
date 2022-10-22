@@ -16,7 +16,8 @@
   border-radius: min(0.4vw, 5px);
 }
 
-.staffs {
+.staffs,
+.supporters {
   display: flex;
   flex-wrap: wrap;
   font-family: 'UD新ゴ B', sans-serif;
@@ -48,22 +49,9 @@
   }
 }
 
-.info {
-  display: flex;
-  align-items: center;
-  width: 320px;
-  margin-left: 12px;
-  font-family: 'UD新ゴ B', sans-serif;
-  font-size: 1.4rem;
-  vertical-align: middle;
-
-  @media screen and (max-width: 600px) {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 600px) {
-  .staffs {
+  .staffs,
+  .supporters {
     display: flex;
     flex-direction: column;
     margin: 0 auto;

@@ -22,6 +22,9 @@
         "libs/shared/docs/code-for-conduct.md",
         "libs/shared/docs/privacy-policy.md"
       ],
+      "@conference/shared/hooks": [
+        "libs/shared/hooks/index.ts"
+      ],
       "@conference/shared/types": [
         "libs/shared/types/index.ts"
       ],
