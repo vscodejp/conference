@@ -8,10 +8,10 @@ const FooterSection: FC = () => {
   return (
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <div className="w-72 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img alt="" src={`${urlPrefix}/icons/vscodejp.svg`} className="w-12" />
-            <span className="ml-3 text-xl">{conferenceNameWithYear}</span>
+            <span className="ml-3 text-md md:text-xl">{conferenceNameWithYear}</span>
           </a>
           <p className="mt-2 text-sm text-gray-500">
             {organizationName} 主催の年次カンファレンス。
@@ -68,14 +68,14 @@ const FooterSection: FC = () => {
             <nav className="list-none mb-10">
               <li>
                 <a
-                  href={`https://vscodejp.github.io/conference/2023/${lang}`}
+                  href={`https://vscodejp.github.io/conference/2022-2023/${lang}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
-                  aria-label="Link to VS Code Conference JP 2023"
-                  aria-describedby="VS Code Conference JP 2023 Website"
+                  aria-label="Link to VS Code Conference JP 2022 - 2023"
+                  aria-describedby="VS Code Conference JP 2022 - 2023 Website"
                 >
-                  {'Conference 2023'}
+                  {'Conference 2022 - 2023'}
                 </a>
               </li>
               <li>

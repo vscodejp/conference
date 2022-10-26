@@ -5,7 +5,7 @@ const withOptimizedImages = require('next-optimized-images')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx')
 
-const urlPrefix = process.env.NODE_ENV === 'production' ? '/conference/2023' : ''
+const urlPrefix = process.env.NODE_ENV === 'production' ? '/conference/2022-2023' : ''
 
 const config = {
   async headers() {

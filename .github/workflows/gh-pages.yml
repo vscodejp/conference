@@ -56,9 +56,9 @@ jobs:
           npx nx run 2023-app:export
           touch dist/apps/2021-app/exported/.nojekyll
           touch dist/apps/2023-app/exported/.nojekyll
-          rm -rf docs/2021 docs/2023
+          rm -rf docs/2021 docs/2022-2023
           mv dist/apps/2021-app/exported docs/2021
-          mv dist/apps/2023-app/exported docs/2023
+          mv dist/apps/2023-app/exported docs/2022-2023
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
