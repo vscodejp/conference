@@ -22,7 +22,7 @@ const ConceptSection: FC = () => {
               <Fragment>
                 <a
                   href="https://vscode.connpass.com/event/263206/"
-                  className="inline-flex text-white bg-emphasis border-0 py-2 px-8 focus:outline-none hover:bg-detail4 rounded text-lg"
+                  className="inline-flex text-white dark:text-white bg-emphasis border-0 py-2 px-8 focus:outline-none hover:bg-detail4 rounded text-lg "
                   aria-label={i18next.t('apply_for_participation_from_connpass_form')}
                   target="_blank"
                   rel="noopener noreferrer"

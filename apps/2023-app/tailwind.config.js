@@ -13,6 +13,7 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   media: false, // or 'class'
+  darkMode: 'class',
   theme: {
     extend: {
       boxShadow: {

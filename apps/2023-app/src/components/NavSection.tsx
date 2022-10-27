@@ -29,28 +29,19 @@ const NavSection: FC = () => {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <a className="flex title-font font-medium items-center mb-4 md:mb-0 text-gray-900 dark:text-gray-300">
           <img alt="" src={`${urlPrefix}/icons/vscodejp.svg`} className="w-12" />
           <span className="ml-3 text-md md:text-xl">{conferenceNameWithYear}</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a href="#about" className="mr-5 hover:text-gray-900">
+          <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
             {i18next.t('about')}
           </a>
-          <a href="#staffs" className="mr-5 hover:text-gray-900">
+          <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
             {i18next.t('staffs')}
           </a>
         </nav>
-        {DARK && (
-          <a
-            href="#"
-            className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-            aria-label="switch color theme"
-            aria-describedby="Switch Color Theme"
-          >
-            <ColorThemeSwitch />
-          </a>
-        )}
+        {DARK && <ColorThemeSwitch />}
       </div>
     </header>
   )
