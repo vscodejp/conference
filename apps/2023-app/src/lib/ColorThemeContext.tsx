@@ -1,41 +1,51 @@
 import { createContext, ReactNode, useState, useEffect } from 'react'
 import { FC } from 'root/react-app-env'
+import { DARK } from '@utils/feature'
 
-import { themeColors } from './constants'
-
+const colorMode = ['light', 'dark'] as const
+type ColorMode = typeof colorMode[number]
 type ColorTheme = {
-  colorMode: 'light' | 'dark'
-  changeColorMode: (cm: 'light' | 'dark') => void
+  colorMode: ColorMode
+  changeColorMode: (cm: ColorMode) => void
+}
+
+const getColorMode = (): ColorMode => {
+  if (typeof window !== 'undefined' && window.localStorage && DARK) {
+    const storedPrefs = window.localStorage.getItem('color-mode')
+    if (
+      typeof storedPrefs === 'string' &&
+      (colorMode as ReadonlyArray<string>).includes(storedPrefs)
+    ) {
+      return storedPrefs as ColorMode
+    }
+
+    const userMedia = window.matchMedia('(prefers-color-scheme: dark)')
+    if (userMedia.matches) {
+      return 'dark'
+    }
+  }
+  return 'light'
 }
 
 export const ColorThemeContext = createContext<ColorTheme>(null)
 
 export const ColorThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [colorMode, setColorMode] = useState(undefined)
-  useEffect(() => {
+  const [colorMode, setColorMode] = useState<ColorMode>(getColorMode)
+  const rawSetColorMode = (color: ColorMode) => {
     const root = window.document.documentElement
-    const initialColorValue = root.style.getPropertyValue('--initial-color-mode')
-    setColorMode(initialColorValue)
-  }, [])
+    const isDark = color === 'dark'
 
-  const changeColorMode = (mode: string) => {
-    setColorMode(mode)
+    root.classList.remove(isDark ? 'light' : 'dark')
+    root.classList.add(color)
 
-    window.localStorage.setItem('color-mode', mode)
-
-    const root = window.document.documentElement
-    root.style.setProperty('--initial-color-mode', mode)
-    root.style.setProperty(
-      '--color-text',
-      mode === 'light' ? themeColors.light.textColor : themeColors.dark.textColor,
-    )
-    root.style.setProperty(
-      '--color-background',
-      mode === 'light' ? themeColors.light.backgroundColor : themeColors.dark.backgroundColor,
-    )
+    localStorage.setItem('color-theme', color)
   }
+
+  useEffect(() => {
+    rawSetColorMode(colorMode)
+  }, [colorMode])
   return (
-    <ColorThemeContext.Provider value={{ colorMode, changeColorMode }}>
+    <ColorThemeContext.Provider value={{ colorMode, changeColorMode: setColorMode }}>
       {children}
     </ColorThemeContext.Provider>
   )

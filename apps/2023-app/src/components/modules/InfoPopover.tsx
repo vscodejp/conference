@@ -1,11 +1,9 @@
-import { useContext, useMemo } from 'react'
 import { FC } from 'root/react-app-env'
 import { Popover } from '@headlessui/react'
 import i18next from 'i18next'
 
 import { ITrack } from '@conference/shared/types'
 import { DetailIcon } from '@conference/shared/ui'
-import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 interface InfoPopover {
@@ -13,14 +11,7 @@ interface InfoPopover {
 }
 
 export const InfoPopover: FC<InfoPopover> = ({ track }) => {
-  const colorTheme = useContext(ColorThemeContext)
   const { mounted } = useHeadlessPatch()
-
-  const contentStyles = useMemo(() => {
-    return colorTheme.colorMode === 'dark'
-      ? { backgroundColor: '#fefefe', color: '#252526' }
-      : { backgroundColor: '#252526', color: '#fefefe' }
-  }, [colorTheme])
 
   return (
     <Popover className="relative">
@@ -33,10 +24,7 @@ export const InfoPopover: FC<InfoPopover> = ({ track }) => {
         </Popover.Button>
       )}
       {mounted && (
-        <Popover.Panel
-          className="translate-[0, 10px] absolute left-0 p-6 w-auto shadow-popover z-30"
-          style={contentStyles}
-        >
+        <Popover.Panel className="translate-[0, 10px] absolute left-0 p-6 w-auto shadow-popover z-30">
           <h4 className="flex items-start justify-start">{track.presenterTitle}</h4>
           <h5 className="text-right">{track.presenterName}</h5>
           <p className="p-0 m-0">

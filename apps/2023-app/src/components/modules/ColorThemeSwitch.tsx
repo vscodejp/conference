@@ -1,30 +1,34 @@
-import { ChangeEvent, useContext } from 'react'
+import { useContext } from 'react'
 import { FC } from 'root/react-app-env'
-import styles from '../../static/ColorThemeSwitch.module.scss'
-
 import { ColorThemeContext } from '@lib/ColorThemeContext'
+import { FaSun, FaMoon } from 'react-icons/fa'
+import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 export const ColorThemeSwitch: FC = () => {
   const colorTheme = useContext(ColorThemeContext)
-
-  const handleChange = (ev: ChangeEvent<HTMLInputElement>) => {
-    const mode = ev.target.checked ? 'dark' : 'light'
-    colorTheme.changeColorMode(mode)
-  }
-
-  const isChecked = colorTheme.colorMode === 'dark'
-
+  const { mounted } = useHeadlessPatch()
   return (
-    <span className={styles.switch}>
-      <input type="checkbox" checked={isChecked} onChange={handleChange} />
-      <label
-        style={{
-          border: isChecked ? '#767676' : '#fff',
-          background: isChecked ? '#03256c' : '#fff',
-        }}
-        aria-hidden="true"
-      />
-    </span>
+    <div
+      className="transition duration-500 ease-in-out rounded-full p-2"
+      aria-label="switch color theme"
+      aria-describedby="Switch Color Theme"
+    >
+      {mounted && colorTheme.colorMode === 'dark' ? (
+        <FaSun
+          onClick={() =>
+            colorTheme.changeColorMode(colorTheme.colorMode === 'dark' ? 'light' : 'dark')
+          }
+          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+        />
+      ) : (
+        <FaMoon
+          onClick={() =>
+            colorTheme.changeColorMode(colorTheme.colorMode === 'dark' ? 'light' : 'dark')
+          }
+          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+        />
+      )}
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-export const DARK = false
+export const DARK = true
 export const APPLY = true
 export const SOCIAL = false
 export const PLAYER = false
