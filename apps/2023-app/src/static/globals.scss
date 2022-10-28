@@ -16,3 +16,7 @@ a {
 * {
   @apply box-border;
 }
+
+html {
+  scroll-behavior: smooth;
+}
