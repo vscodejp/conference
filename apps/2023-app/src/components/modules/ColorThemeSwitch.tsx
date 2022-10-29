@@ -2,18 +2,16 @@ import { useContext } from 'react'
 import { FC } from 'root/react-app-env'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { FaSun, FaMoon } from 'react-icons/fa'
-import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 export const ColorThemeSwitch: FC = () => {
   const colorTheme = useContext(ColorThemeContext)
-  const { mounted } = useHeadlessPatch()
   return (
     <div
       className="transition duration-500 ease-in-out rounded-full p-2"
       aria-label="switch color theme"
       aria-describedby="Switch Color Theme"
     >
-      {mounted && colorTheme.colorMode === 'dark' ? (
+      {colorTheme.colorMode === 'dark' ? (
         <FaSun
           onClick={() =>
             colorTheme.changeColorMode(colorTheme.colorMode === 'dark' ? 'light' : 'dark')
