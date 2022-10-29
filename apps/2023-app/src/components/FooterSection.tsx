@@ -25,7 +25,7 @@ const FooterSection: FC = () => {
             <nav className="list-none mb-10">
               <li>
                 <a
-                  href={`/${lang}/code-for-conduct`}
+                  href={`${urlPrefix}/${lang}/code-for-conduct`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
@@ -37,7 +37,7 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href={`/${lang}/privacy-policy`}
+                  href={`${urlPrefix}/${lang}/privacy-policy`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
