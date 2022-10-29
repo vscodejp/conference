@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import i18next from 'i18next'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import ReactMarkdown from 'react-markdown'
@@ -10,10 +11,10 @@ import { urlPrefix } from '@utils/endpoints.constants'
 
 export default function Home({ terms }) {
   return (
-    <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center">
+    <Fragment>
       <NavSection />
 
-      <main className="p-0 m-0">
+      <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center">
         <h1 className="m-0 leading-5 text-xl">{i18next.t('code_of_conduct')}</h1>
 
         <div className="flex items-center justify-center flex-wrap max-w-5xl my-2">
@@ -23,10 +24,10 @@ export default function Home({ terms }) {
         <Button path={urlPrefix} tooltip={i18next.t('back_to_top')}>
           {i18next.t('back_to_top')}
         </Button>
-      </main>
+      </div>
 
       <FooterSection />
-    </div>
+    </Fragment>
   )
 }
 
