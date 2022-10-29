@@ -1,4 +1,5 @@
 export const conferenceName = 'VS Code Conference JP'
+export const simplyName = 'VSCodeCon JP'
 export const year = '2022 - 2023'
 export const conferenceNameWithYear = `${conferenceName} ${year}`
 export const organizationName = 'VS Code Meetup'

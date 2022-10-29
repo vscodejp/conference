@@ -11,7 +11,7 @@ const FooterSection: FC = () => {
         <div className="w-72 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img alt="" src={`${urlPrefix}/icons/vscodejp.svg`} className="w-12" />
-            <span className="ml-3 text-md md:text-xl">{conferenceNameWithYear}</span>
+            <span className="ml-3 text-lg md:text-xl">{conferenceNameWithYear}</span>
           </a>
           <p className="mt-2 text-sm text-gray-500">
             {organizationName} 主催の年次カンファレンス。
