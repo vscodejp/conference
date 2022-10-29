@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { FC } from 'root/react-app-env'
 import { FaBars } from 'react-icons/fa'
+import Link from 'next/link'
 import i18next from 'i18next'
 import styles from '@static/Header.module.scss'
 import { conferenceNameWithYear, simplyName } from '@utils/constants'
@@ -39,31 +40,30 @@ const NavSection: FC = () => {
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           <div className="md:block hidden">
-            <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+            <Link scroll href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {i18next.t('about')}
-            </a>
-            <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+            </Link>
+            <Link scroll href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {i18next.t('staffs')}
-            </a>
+            </Link>
           </div>
-          <FaBars
-            onClick={() => setIsOpen(!isOpen)}
-            className="block md:hidden text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
-          />
+          <Link href="#" onClick={() => setIsOpen(!isOpen)}>
+            <FaBars className="block md:hidden text-gray-500 dark:text-gray-400 text-2xl cursor-pointer" />
+          </Link>
           {DARK && <ColorThemeSwitch />}
         </nav>
         {isOpen && (
           <div className="md:hidden w-full block md:w-auto" id="mobile-menu">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li className="list-none p-0 m-0 flex justify-center items-center">
-                <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+                <Link scroll href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
                   {i18next.t('about')}
-                </a>
+                </Link>
               </li>
               <li className="list-none p-0 m-0 flex justify-center items-center">
-                <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+                <Link scroll href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
                   {i18next.t('staffs')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

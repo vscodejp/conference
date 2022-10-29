@@ -3,6 +3,7 @@ import { FC } from 'root/react-app-env'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { FaSun, FaMoon } from 'react-icons/fa'
 import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
+import Link from 'next/link'
 
 export const ColorThemeSwitch: FC = () => {
   const colorTheme = useContext(ColorThemeContext)
@@ -14,19 +15,23 @@ export const ColorThemeSwitch: FC = () => {
       aria-describedby="Switch Color Theme"
     >
       {mounted && colorTheme.colorMode === 'dark' ? (
-        <FaSun
+        <Link
+          href="#"
           onClick={() =>
             colorTheme.changeColorMode(colorTheme.colorMode === 'dark' ? 'light' : 'dark')
           }
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
-        />
+        >
+          <FaSun className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer" />
+        </Link>
       ) : (
-        <FaMoon
+        <Link
+          href="#"
           onClick={() =>
             colorTheme.changeColorMode(colorTheme.colorMode === 'dark' ? 'light' : 'dark')
           }
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
-        />
+        >
+          <FaMoon className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer" />
+        </Link>
       )}
     </div>
   )
