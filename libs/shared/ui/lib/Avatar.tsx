@@ -1,6 +1,6 @@
 import { link, linkInfo, wrapper } from './Avatar.styles'
 
-interface AvatarIconProps {
+export interface AvatarIconProps {
   url: string
   alt: string
   src: string
