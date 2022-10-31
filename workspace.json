@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "2021-app": "apps/2021-app",
-    "2023-app": "apps/2023-app"
+    "2023-app": "apps/2023-app",
+    "shared-ui": "libs/shared/ui"
   }
 }
