@@ -1,12 +1,15 @@
 import { useContext } from 'react'
-import { FC } from 'root/react-app-env'
-import { ColorThemeContext } from '@lib/ColorThemeContext'
 import { FaSun, FaMoon } from 'react-icons/fa'
-import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
+import { FC } from 'root/react-app-env'
+import { useOnMounted } from '@conference/shared/hooks'
+import { ColorThemeContext } from '@lib/ColorThemeContext'
 
 export const ColorThemeSwitch: FC = () => {
   const colorTheme = useContext(ColorThemeContext)
-  const { mounted } = useHeadlessPatch()
+
+  // https://github.com/tailwindlabs/headlessui/issues/470#issue-873819383
+  const { mounted } = useOnMounted()
+
   return (
     <div
       className="transition duration-500 ease-in-out rounded-full p-2"

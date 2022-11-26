@@ -3,15 +3,16 @@ import { Popover } from '@headlessui/react'
 import i18next from 'i18next'
 
 import { ITrack } from '@conference/shared/types'
+import { useOnMounted } from '@conference/shared/hooks'
 import { DetailIcon } from '@conference/shared/ui'
-import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 
 interface InfoPopover {
   track: ITrack
 }
 
 export const InfoPopover: FC<InfoPopover> = ({ track }) => {
-  const { mounted } = useHeadlessPatch()
+  // https://github.com/tailwindlabs/headlessui/issues/470#issue-873819383
+  const { mounted } = useOnMounted()
 
   return (
     <Popover className="relative">

@@ -4,9 +4,9 @@ import { Popover } from '@headlessui/react'
 import i18next from 'i18next'
 
 import { ITrack } from '@conference/shared/types'
+import { useOnMounted } from '@conference/shared/hooks'
 import { DetailIcon } from '@conference/shared/ui'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
-import { useHeadlessPatch } from '@components/hooks/useHeadlessPatch'
 import popoverStyles from '@static/Popover.module.scss'
 import tagStyles from '@static/Tag.module.scss'
 
@@ -16,7 +16,9 @@ interface InfoPopover {
 
 export const InfoPopover: FC<InfoPopover> = ({ track }) => {
   const colorTheme = useContext(ColorThemeContext)
-  const { mounted } = useHeadlessPatch()
+
+  // https://github.com/tailwindlabs/headlessui/issues/470#issue-873819383
+  const { mounted } = useOnMounted()
 
   const contentStyles = useMemo(() => {
     return colorTheme.colorMode === 'dark'
