@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useState, useEffect } from 'react'
-import { FC } from 'root/react-app-env'
+import { createContext, useState, useEffect } from 'react'
+import { FCWithChildren } from 'root/react-app-env'
 import { DARK } from '@utils/feature'
 
 const colorMode = ['light', 'dark'] as const
@@ -29,7 +29,7 @@ const getColorMode = (): ColorMode => {
 
 export const ColorThemeContext = createContext<ColorTheme>(null)
 
-export const ColorThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+export const ColorThemeProvider: FCWithChildren = ({ children }) => {
   const [colorMode, setColorMode] = useState<ColorMode>(getColorMode)
   const rawSetColorMode = (color: ColorMode) => {
     const root = window.document.documentElement

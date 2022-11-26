@@ -1,3 +1,4 @@
+import React from 'react'
 import { link, linkInfo, wrapper } from './Avatar.styles'
 
 export interface AvatarIconProps {

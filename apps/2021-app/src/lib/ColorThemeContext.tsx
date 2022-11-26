@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
-import { FC } from 'root/react-app-env'
-
+import { FCWithChildren } from 'root/react-app-env'
 import { themeColors } from './constants'
 
 type ColorTheme = {
@@ -10,7 +9,7 @@ type ColorTheme = {
 
 export const ColorThemeContext = createContext<ColorTheme>(null)
 
-export const ColorThemeProvider: FC<{ children: any }> = ({ children }) => {
+export const ColorThemeProvider: FCWithChildren = ({ children }) => {
   const [colorMode, setColorMode] = useState(undefined)
   useEffect(() => {
     const root = window.document.documentElement
