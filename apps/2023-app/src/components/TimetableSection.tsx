@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import i18next from 'i18next'
 import { useDateTime, useString } from '@conference/shared/hooks'
 import { sessions, trackNames, tracks } from '@contents/sessions'
-import timetableStyles from '@static/Schedule.module.scss'
+import styles from '@static/Schedule.module.scss'
 import { InfoPopover } from './modules/InfoPopover'
 
 const TimetableSection: FC = () => {
@@ -15,13 +15,13 @@ const TimetableSection: FC = () => {
       <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
         {i18next.t('timetable')}
       </h2>
-      <div className={timetableStyles.schedule} aria-labelledby={'schedule-heading'}>
+      <div className={styles.schedule} aria-labelledby={'schedule-heading'}>
         <Fragment>
           {tracks.map((track: string, val: number) => {
             return (
               <span
                 key={val}
-                className={timetableStyles.trackslot}
+                className={styles.trackslot}
                 aria-hidden={'true'}
                 style={{ gridColumn: track, gridRow: 'tracks' }}
               >
@@ -36,7 +36,7 @@ const TimetableSection: FC = () => {
             return (
               <Fragment key={index}>
                 <h2
-                  className={timetableStyles.timeslot}
+                  className={styles.timeslot}
                   aria-hidden={'true'}
                   style={{ gridRow: `time-${session.startTime}` }}
                 >
@@ -50,7 +50,7 @@ const TimetableSection: FC = () => {
                           <div />
                         ) : track.presenterTitle === 'Rest' ? (
                           <div
-                            className={`${timetableStyles.session} ${timetableStyles.rest}`}
+                            className={`${styles.session} ${styles.rest}`}
                             aria-hidden={'true'}
                             style={{
                               gridColumn: track.trackId,
@@ -61,22 +61,22 @@ const TimetableSection: FC = () => {
                           </div>
                         ) : (
                           <div
-                            className={`${timetableStyles.session} ${timetableStyles.track1}`}
+                            className={`${styles.session} ${styles.track1}`}
                             style={{
                               gridColumn: track.trackId,
                               gridRow: `time-${session.startTime} time-${session.endTime}`,
                             }}
                           >
                             <InfoPopover track={track} />
-                            <h3 className={timetableStyles.sessionTitle}>
+                            <h3 className={styles.sessionTitle}>
                               <div>
                                 <p>{track.presenterTitle}</p>
                               </div>
                             </h3>
-                            <h4 className={timetableStyles.sessionTime}>
+                            <h4 className={styles.sessionTime}>
                               {`${formatTime(session.startTime)} - ${formatTime(session.endTime)}`}
                             </h4>
-                            <p className={timetableStyles.sessionPresenter}>
+                            <p className={styles.sessionPresenter}>
                               {capitalizeFirst(track.personType)}
                               {track.presenterLevel && ` / ${i18next.t(track.presenterLevel)}`}
                             </p>
