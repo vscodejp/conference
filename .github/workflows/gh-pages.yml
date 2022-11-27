@@ -41,7 +41,7 @@ jobs:
 
       - name: Transpile
         run: |
-          npm ci
+          yarn
           npx nx run 2021-app:build
           npx nx run 2023-app:build
         env:
