@@ -30,48 +30,22 @@ const NavSection: FC = () => {
 
   return (
     <div ref={ref} className={styles.header}>
-      <Link href={`/${lang}/`}>
-        <a aria-label="link to title" aria-describedby="Title" className={styles.logo}>
-          {conferenceName}
-        </a>
+      <Link href={`/${lang}/`} className={styles.logo}>
+        {conferenceName}
       </Link>
       <div className={styles.links_wrapper}>
         <nav className={styles.links}>
-          <Link href={`/${lang}/#about`}>
-            <a
-              aria-label="Link to AboutSection"
-              aria-describedby={i18next.t('about')}
-              className={styles.link}
-            >
-              {i18next.t('about')}
-            </a>
+          <Link href={`/${lang}/#about`} className={styles.link}>
+            {i18next.t('about')}
           </Link>
-          <Link href={`/${lang}/#timetable`}>
-            <a
-              aria-label="Link to TimetableSection"
-              aria-describedby={i18next.t('timetable')}
-              className={styles.link}
-            >
-              {i18next.t('timetable')}
-            </a>
+          <Link href={`/${lang}/#timetable`} className={styles.link}>
+            {i18next.t('timetable')}
           </Link>
-          <Link href={`/${lang}/#staffs`}>
-            <a
-              aria-label="Link to StaffSection"
-              aria-describedby={i18next.t('staffs')}
-              className={styles.link}
-            >
-              {i18next.t('staffs')}
-            </a>
+          <Link href={`/${lang}/#staffs`} className={styles.link}>
+            {i18next.t('staffs')}
           </Link>
-          <Link href={`/${lang}/#supporters`}>
-            <a
-              aria-label="link to Aupporters"
-              aria-describedby="SupporterSection"
-              className={styles.link}
-            >
-              {i18next.t('supporters')}
-            </a>
+          <Link href={`/${lang}/#supporters`} className={styles.link}>
+            {i18next.t('supporters')}
           </Link>
           <a
             href="#"
