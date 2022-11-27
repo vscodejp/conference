@@ -41,7 +41,7 @@ jobs:
 
       - name: Lint
         run: |
-          npm ci
+          yarn
           npx nx run 2021-app:lint
           npx nx run 2023-app:lint
         env:
