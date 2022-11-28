@@ -9,12 +9,12 @@ const AboutSection: FC = () => {
     <section id="about" className="text-gray-600 dark:text-gray-400 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 dark:text-gray-300 mb-4">
+          <h2 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 dark:text-gray-300 mb-4">
             {conferenceNameWithYear}
-          </h1>
-          <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          </h2>
+          <h3 className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             {i18next.t('explain')}
-          </div>
+          </h3>
         </div>
         {APPLY && (
           <Fragment>
