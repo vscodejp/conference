@@ -11,7 +11,7 @@ export default function Home() {
       <NavSection />
 
       <main className="p-0 m-0">
-        <h1 className="m-0 leading-5 text-xl">{i18next.t('contact')}</h1>
+        <h2 className="m-0 leading-5 text-xl">{i18next.t('contact')}</h2>
 
         <div className="flex items-center justify-center flex-wrap max-w-5xl my-2">
           <Button

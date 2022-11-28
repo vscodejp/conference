@@ -10,7 +10,7 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 export const PreEventPlayer: FC = () => {
   return (
     <div id={'player'} className={playerStyles.player}>
-      <h1 className={styles.title}>{i18next.t('pre_event')}</h1>
+      <h2 className={styles.title}>{i18next.t('pre_event')}</h2>
       <p>{i18next.t('subscribing_to_the_youtube_channel')}</p>
       <ReactPlayer width={'100%'} url="https://youtu.be/Y8dl1y2qdG8" />
     </div>

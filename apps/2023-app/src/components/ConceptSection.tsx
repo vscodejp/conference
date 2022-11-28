@@ -11,10 +11,10 @@ const ConceptSection: FC = () => {
     <section id={'concept'} className="p-0 m-0 text-gray-600 body-font bg-vscode">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="md:w-[32vw] w-full title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+          <h2 className="md:w-[32vw] w-full title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             {conferenceNameWithYear}
-          </h1>
-          <div className="mb-8 leading-relaxed text-gray-300">{i18next.t('explain')}</div>
+          </h2>
+          <h3 className="mb-8 leading-relaxed text-gray-300">{i18next.t('explain')}</h3>
           <div className="flex justify-center">
             {APPLY && (
               <Fragment>

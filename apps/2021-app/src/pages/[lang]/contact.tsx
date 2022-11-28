@@ -12,7 +12,7 @@ export default function Home() {
       <NavSection />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{i18next.t('contact')}</h1>
+        <h2 className={styles.title}>{i18next.t('contact')}</h2>
 
         <div className={styles.content}>
           <Button

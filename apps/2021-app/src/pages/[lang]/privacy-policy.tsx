@@ -15,7 +15,7 @@ export default function Home({ terms }) {
       <NavSection />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{i18next.t('privacy_policy')}</h1>
+        <h2 className={styles.title}>{i18next.t('privacy_policy')}</h2>
 
         <div className={styles.content}>
           <ReactMarkdown skipHtml={false}>{terms}</ReactMarkdown>
