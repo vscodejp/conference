@@ -150,6 +150,38 @@
   box-shadow: none;
 }
 
+.title {
+  position: relative;
+  padding: 15px 0;
+  font-size: 24px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #f51d65;
+  background-color: transparent;
+  border: 1px solid #f51d65;
+  border-radius: 2em;
+}
+
 .text {
   max-width: 750px;
   margin: 0 auto 50px;
