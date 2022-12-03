@@ -1,10 +1,12 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
+import { Popover as _Popover } from '@headlessui/react'
 import i18next from 'i18next'
 import { useDateTime, useString } from '@conference/shared/hooks'
+import { DetailIcon } from '@conference/shared/ui'
+import { Popover } from './modules/Popover'
 import { sessions, trackNames, tracks } from '@contents/sessions'
 import styles from '@static/Schedule.module.scss'
-import { InfoPopover } from './modules/InfoPopover'
 
 const TimetableSection: FC = () => {
   const { capitalizeFirst } = useString()
@@ -67,7 +69,42 @@ const TimetableSection: FC = () => {
                               gridRow: `time-${session.startTime} time-${session.endTime}`,
                             }}
                           >
-                            <InfoPopover track={track} />
+                            <Popover
+                              content={
+                                <Fragment>
+                                  <h4 className="flex items-start justify-start text-2xl">
+                                    {track.presenterTitle}
+                                  </h4>
+                                  <h5 className="text-right text-lg">{track.presenterName}</h5>
+                                  {track.presenterLive && (
+                                    <div className="border border-solid border-error to-transparent inline-block px-1.5 mr-2 text-lg font-medium leading-4 rounded">
+                                      {'Live'}
+                                    </div>
+                                  )}
+                                  <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
+                                    {i18next.t('bio')}
+                                  </h6>
+                                  <p
+                                    className="p-0 m-0 text-sm"
+                                    dangerouslySetInnerHTML={{ __html: track.presenterBio }}
+                                  />
+                                  <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
+                                    {i18next.t('session_description')}
+                                  </h6>
+                                  <p
+                                    className="p-0 m-0 text-sm"
+                                    dangerouslySetInnerHTML={{ __html: track.presenterDescription }}
+                                  />
+                                </Fragment>
+                              }
+                            >
+                              <_Popover.Button className="to-transparent border-0 flex relative text-xl no-underline text-center py-4 text-white cursor-pointer">
+                                {track.presenterName}
+                                <div className="w-4 h-4 ml-2">
+                                  <DetailIcon />
+                                </div>
+                              </_Popover.Button>
+                            </Popover>
                             <h3 className={styles.sessionTitle}>
                               <div>
                                 <p>{track.presenterTitle}</p>
