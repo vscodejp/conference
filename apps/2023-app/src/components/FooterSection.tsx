@@ -80,7 +80,7 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href={`https://vscodejp.github.io/conference/2021/${lang}`}
+                  href={`https://vscodejp.github.io/conf2021/${lang}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
