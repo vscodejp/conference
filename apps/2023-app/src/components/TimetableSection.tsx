@@ -50,7 +50,7 @@ const TimetableSection: FC = () => {
                       <Fragment key={key}>
                         {track.presenterTitle === '' ? (
                           <div />
-                        ) : track.presenterTitle === 'Rest' ? (
+                        ) : track.presenterTitle === 'Rest' || track.presenterTitle === 'Lunch' ? (
                           <div
                             className={`${styles.session} ${styles.rest}`}
                             aria-hidden={'true'}
@@ -59,7 +59,9 @@ const TimetableSection: FC = () => {
                               gridRow: `time-${session.startTime} time-${session.endTime}`,
                             }}
                           >
-                            {i18next.t('rest_ask_the_speaker')}
+                            {track.presenterTitle === 'Rest'
+                              ? i18next.t('rest_ask_the_speaker')
+                              : i18next.t('lunch_rest')}
                           </div>
                         ) : (
                           <div
