@@ -25,11 +25,6 @@ export const staffs = [
     iconFilename: 'ayatokura.jpeg',
   },
   {
-    name: 'ふじい',
-    url: 'https://twitter.com/dafujii_k',
-    iconName: 'https://pbs.twimg.com/profile_images/1300633615299084290/2I55c5_2_400x400.jpg',
-  },
-  {
     name: 'ロフトくん',
     url: 'https://twitter.com/loftkun',
     iconName: 'https://pbs.twimg.com/profile_images/1130041560471486464/2vwZ3x9u_400x400.png',
@@ -43,16 +38,6 @@ export const staffs = [
     name: 'yamachu',
     url: 'https://twitter.com/y_chu5',
     iconFilename: 'yamachu.jpeg',
-  },
-  {
-    name: 'まっぴぃ／Yuji Masaoka',
-    url: 'https://twitter.com/mappie_kochi',
-    iconName: 'https://pbs.twimg.com/profile_images/1207823591904927745/ib5UY5Hf_400x400.jpg',
-  },
-  {
-    name: 'Keisuke Sawa',
-    url: null,
-    iconFilename: 'sawa.png',
   },
   {
     name: 'Yuki Ueda',
