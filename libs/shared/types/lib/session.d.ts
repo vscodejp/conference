@@ -3,7 +3,7 @@ export type TrackName = 'Track A' | 'Track B'
 export type PersonType = 'presenter' | 'inviter'
 
 export interface ITrack {
-  trackId: TrackID
+  trackId?: TrackID
   personType?: PersonType
   presenterName?: string
   presenterTitle: string
@@ -17,5 +17,5 @@ export interface ITrack {
 export interface ISession {
   tracks: Array<ITrack>
   startTime: string
-  endTime: string
+  endTime?: string
 }
