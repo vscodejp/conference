@@ -5,7 +5,7 @@ import i18next from 'i18next'
 import { useDateTime, useString } from '@conference/shared/hooks'
 import { DetailIcon } from '@conference/shared/ui'
 import { Popover } from './modules/Popover'
-import { sessions, trackNames, tracks } from '@contents/sessions'
+import { sessions } from '@contents/sessions'
 import styles from '@static/Schedule.module.scss'
 
 const TimetableSection: FC = () => {
@@ -19,28 +19,17 @@ const TimetableSection: FC = () => {
       </h2>
       <div className={styles.schedule} aria-labelledby={'schedule-heading'}>
         <Fragment>
-          {tracks.map((track: string, val: number) => {
-            return (
-              <span
-                key={val}
-                className={styles.trackslot}
-                aria-hidden={'true'}
-                style={{ gridColumn: track, gridRow: 'tracks' }}
-              >
-                {trackNames[val]}
-              </span>
-            )
-          })}
-        </Fragment>
-
-        <Fragment>
           {sessions.map((session, index) => {
             return (
               <Fragment key={index}>
                 <h2
                   className={styles.timeslot}
                   aria-hidden={'true'}
-                  style={{ gridRow: `time-${session.startTime}` }}
+                  style={{
+                    gridRow: `time-${session.startTime} ${
+                      session.tracks.length > 1 ? '/time-' + session.endTime : ''
+                    }`,
+                  }}
                 >
                   {formatTime(session.startTime)}
                 </h2>
@@ -48,14 +37,14 @@ const TimetableSection: FC = () => {
                   {session.tracks.map((track, key) => {
                     return (
                       <Fragment key={key}>
-                        {track.presenterTitle === '' ? (
+                        {track.presenterTitle === '' || track.presenterTitle === null ? (
                           <div />
                         ) : track.presenterTitle === 'Rest' || track.presenterTitle === 'Lunch' ? (
                           <div
                             className={`${styles.session} ${styles.rest}`}
                             aria-hidden={'true'}
                             style={{
-                              gridColumn: track.trackId,
+                              gridColumn: 2,
                               gridRow: `time-${session.startTime} time-${session.endTime}`,
                             }}
                           >
@@ -67,7 +56,7 @@ const TimetableSection: FC = () => {
                           <div
                             className={`${styles.session} ${styles.track1}`}
                             style={{
-                              gridColumn: track.trackId,
+                              gridColumn: 2,
                               gridRow: `time-${session.startTime} time-${session.endTime}`,
                             }}
                           >

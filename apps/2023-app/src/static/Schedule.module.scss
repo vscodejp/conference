@@ -7,30 +7,27 @@
 @media screen and (min-width: 600px) {
   .schedule {
     grid-template-rows:
-      [tracks] auto
       [time-1110] auto
-      [time-1140] 1fr
+      [time-1140] auto
       [time-1150] auto
-      [time-1230] 1fr
+      [time-1230] auto
       [time-1330] auto
+      [time-1400] auto
       [time-1410] auto
-      [time-1440] 1fr
+      [time-1440] auto
       [time-1450] auto
-      [time-1520] 1fr
+      [time-1450] auto
+      [time-1520] auto
       [time-1550] auto
-      [time-1610] 1fr
-      [time-1620] auto
-      [time-1650] 1fr
-      [time-1700] 1fr;
+      [time-1605] auto
+      [time-1620] auto;
     grid-template-columns:
       [times] 4em
-      [track1-start] 2fr;
+      [track1-start] 1fr;
+    //[track1-end track2-end] 1fr;
     grid-gap: 1em;
-    //[track1-end track2-start] 1fr
-    //[track2-end track3-start] 1fr
-    //[track3-end track4-start] 1fr
-    //[track4-end];
-    @apply grid;
+
+    @apply grid self-center w-2/3;
   }
 }
 
@@ -75,7 +72,7 @@
 }
 
 .sessionTitle {
-  height: 8em;
+  height: 4em;
   min-height: 80px !important;
 
   @apply leading-6 flex-col justify-start text-xl;
@@ -102,18 +99,6 @@
   @apply bg-detail1 text-white;
 }
 
-.track2 {
-  @apply bg-detail2 text-white;
-}
-
-.track3 {
-  @apply bg-detail3 text-white;
-}
-
-.track4 {
-  @apply bg-detail4 text-white;
-}
-
 .allTrack {
   background: #ccc;
 
@@ -130,4 +115,10 @@
 
 .meta a {
   @apply text-sub_dark;
+}
+
+.schedule h2 {
+  @apply w-full text-white text-center py-5 text-2xl rounded-md;
+
+  background: linear-gradient(22deg, #0098ff, #007acc, #0065a9);
 }
