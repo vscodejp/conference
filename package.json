@@ -14,8 +14,14 @@
     "2023-app:build": "nx run 2023-app:build",
     "2023-app:export": "nx run 2023-app:export",
     "2023-app:lint": "nx run 2023-app:lint",
+    "shared-hooks:typecheck": "nx run shared-hooks:typecheck",
+    "shared-hooks:lint": "nx run shared-hooks:lint",
+    "shared-types:typecheck": "nx run shared-types:typecheck",
+    "shared-types:lint": "nx run shared-types:lint",
     "shared-ui:storybook": "nx run shared-ui:storybook",
-    "shared-ui:build-storybook": "nx run shared-ui:build-storybook"
+    "shared-ui:build-storybook": "nx run shared-ui:build-storybook",
+    "shared-ui:typecheck": "nx run shared-ui:typecheck",
+    "shared-ui:lint": "nx run shared-ui:lint"
   },
   "dependencies": {
     "@emotion/css": "11.10.0",

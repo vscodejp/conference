@@ -1,44 +1,48 @@
 import { Fragment } from 'react'
 import { FC } from 'root/react-app-env'
 import i18next from 'i18next'
-import { TweetButton } from '@conference/shared/ui'
+import { IconButton } from '@conference/shared/ui'
 
 const SocialSection: FC = () => {
   return (
     <Fragment>
       <div className="py-1.5 flex items-center justify-center">
-        <TweetButton
-          path="https://twitter.com/intent/tweet?hashtags=vscodejp_A"
+        <IconButton
+          href="https://twitter.com/intent/tweet?hashtags=vscodejp_A"
           tooltip={i18next.t('tweet_at_vscodejp_a')}
           isExternalLink
+          isTwitter
         >
           {'Tweet #vscodejp_A'}
-        </TweetButton>
-        <TweetButton
-          path="https://twitter.com/i/spaces/1OdJrBagjMnJX"
+        </IconButton>
+        <IconButton
+          href="https://twitter.com/i/spaces/1OdJrBagjMnJX"
           tooltip={i18next.t('join_ask_the_speaker_at_a')}
           isExternalLink
+          isTwitter
           showSpaces
         >
           {'Ask the Speaker at A'}
-        </TweetButton>
+        </IconButton>
       </div>
       <div className="py-1.5 flex items-center justify-center">
-        <TweetButton
-          path="https://twitter.com/intent/tweet?hashtags=vscodejp_B"
+        <IconButton
+          href="https://twitter.com/intent/tweet?hashtags=vscodejp_B"
           tooltip={i18next.t('tweet_at_vscodejp_b')}
           isExternalLink
+          isTwitter
         >
           {'Tweet #vscodejp_B'}
-        </TweetButton>
-        <TweetButton
-          path="https://twitter.com/i/spaces/1DXxyDBqqLVJM"
+        </IconButton>
+        <IconButton
+          href="https://twitter.com/i/spaces/1DXxyDBqqLVJM"
           tooltip={i18next.t('join_ask_the_speaker_at_b')}
           isExternalLink
+          isTwitter
           showSpaces
         >
           {'Ask the Speaker at B'}
-        </TweetButton>
+        </IconButton>
       </div>
       <div
         className="w-full text-center text-lg py-1.5 rounded-lg"

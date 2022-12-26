@@ -1,0 +1,7 @@
+{
+  "name": "shared-docs",
+  "sourceRoot": "libs/shared-docs",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}
