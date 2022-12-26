@@ -6,7 +6,6 @@
     "types": ["node"]
   },
   "include": [
-    "jest.config.ts",
     "**/*.test.ts",
     "**/*.spec.ts",
     "**/*.test.tsx",

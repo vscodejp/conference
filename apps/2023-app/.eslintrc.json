@@ -17,9 +17,6 @@
       "rules": {}
     }
   ],
-  "env": {
-    "jest": true
-  },
   "rules": {
     "no-prototype-builtins": 0
   }

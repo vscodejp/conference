@@ -17,9 +17,6 @@
       "rules": {}
     }
   ],
-  "env": {
-    "jest": true
-  },
   "rules": {
     "@next/next/no-img-element": 0,
     "@typescript-eslint/no-explicit-any": 0,
