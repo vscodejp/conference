@@ -29,16 +29,16 @@ export const sessions: ISession[] = [
     tracks: [
       {
         personType: 'presenter',
-        presenterName: 'Makky12',
-        presenterTitle: 'Remote SSHで行うVS Codeリモートホスト開発とトラブルシューティング',
+        presenterName: '馬場浩乃',
+        presenterTitle: 'Azure Functionsをサクッと開発、サクッとデプロイ',
         presenterDescription:
-          '拡張機能「Remote SSH」を紹介するとともに、実際にRemote SSHにてリモートホストにssh接続し、接続先の環境でVSCodeにて開発を行う、という作業について紹介します。実際に業務で直面したトラブル、及びそのトラブルシューティングについても紹介いたします。',
+          '最近は簡単なアプリを作りたい時、Azure FunctionsとAzure Static Web Appsでミニマムに始めることが多くなりました。<br>devcontainerで開発環境を用意し、GitHub Actionsでデプロイまで完了。<br>サクッと環境を整えてコードを書く時間に回しましょう。',
         presenterLive: true,
         presenterLevel: 'beginner',
       },
     ],
     startTime: '1150',
-    endTime: '1220',
+    endTime: '1205',
   },
   {
     tracks: [
@@ -46,8 +46,8 @@ export const sessions: ISession[] = [
         presenterTitle: 'Rest',
       },
     ],
-    startTime: '1230',
-    endTime: '1330',
+    startTime: '1205',
+    endTime: '1300',
   },
   {
     tracks: [
@@ -61,8 +61,8 @@ export const sessions: ISession[] = [
         presenterLevel: 'beginner',
       },
     ],
-    startTime: '1330',
-    endTime: '1400',
+    startTime: '1300',
+    endTime: '1330',
   },
   {
     tracks: [
@@ -70,8 +70,8 @@ export const sessions: ISession[] = [
         presenterTitle: 'Rest',
       },
     ],
-    startTime: '1400',
-    endTime: '1410',
+    startTime: '1330',
+    endTime: '1340',
   },
   {
     tracks: [
@@ -85,8 +85,8 @@ export const sessions: ISession[] = [
         presenterLevel: 'intermediate',
       },
     ],
-    startTime: '1410',
-    endTime: '1440',
+    startTime: '1340',
+    endTime: '1410',
   },
   {
     tracks: [
@@ -94,8 +94,8 @@ export const sessions: ISession[] = [
         presenterTitle: 'Rest',
       },
     ],
-    startTime: '1440',
-    endTime: '1450',
+    startTime: '1410',
+    endTime: '1420',
   },
   {
     tracks: [
@@ -118,46 +118,22 @@ export const sessions: ISession[] = [
         presenterLevel: 'beginner',
       },
     ],
+    startTime: '1420',
+    endTime: '1450',
+  },
+  {
+    tracks: [
+      {
+        presenterTitle: 'Rest',
+      },
+    ],
     startTime: '1450',
     endTime: '1520',
   },
   {
     tracks: [
       {
-        presenterTitle: 'Rest',
-      },
-    ],
-    startTime: '1520',
-    endTime: '1550',
-  },
-  {
-    tracks: [
-      {
-        personType: 'presenter',
-        presenterName: 'Hirono Baba',
-        presenterTitle: 'Azure Functionsをサクッと開発、サクッとデプロイ',
-        presenterDescription:
-          '最近は簡単なアプリを作りたい時、Azure FunctionsとAzure Static Web Appsでミニマムに始めることが多くなりました。<br>devcontainerで開発環境を用意し、GitHub Actionsでデプロイまで完了。<br>サクッと環境を整えてコードを書く時間に回しましょう。',
-        presenterLive: true,
-        presenterLevel: 'beginner',
-      },
-    ],
-    startTime: '1550',
-    endTime: '1605',
-  },
-  {
-    tracks: [
-      {
-        presenterTitle: 'Rest',
-      },
-    ],
-    startTime: '1605',
-    endTime: '1620',
-  },
-  {
-    tracks: [
-      {
-        personType: 'presenter',
+        personType: 'inviter',
         presenterName: '岩永かづみ',
         presenterTitle:
           'GitHub Codespaces が拡げる開発環境、いつでもどこでも Visual Studio Code で！',
@@ -166,7 +142,31 @@ export const sessions: ISession[] = [
         presenterLive: true,
       },
     ],
-    startTime: '1620',
-    endTime: '1650',
+    startTime: '1520',
+    endTime: '1550',
+  },
+  {
+    tracks: [
+      {
+        presenterTitle: 'Rest',
+      },
+    ],
+    startTime: '1550',
+    endTime: '1600',
+  },
+  {
+    tracks: [
+      {
+        personType: 'presenter',
+        presenterName: 'Makky12',
+        presenterTitle: 'Remote SSHで行うVS Codeリモートホスト開発とトラブルシューティング',
+        presenterDescription:
+          '拡張機能「Remote SSH」を紹介するとともに、実際にRemote SSHにてリモートホストにssh接続し、接続先の環境でVSCodeにて開発を行う、という作業について紹介します。実際に業務で直面したトラブル、及びそのトラブルシューティングについても紹介いたします。',
+        presenterLive: true,
+        presenterLevel: 'beginner',
+      },
+    ],
+    startTime: '1600',
+    endTime: '1630',
   },
 ]
