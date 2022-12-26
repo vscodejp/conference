@@ -3,6 +3,9 @@
   "projects": {
     "2021-app": "apps/2021-app",
     "2023-app": "apps/2023-app",
+    "shared-docs": "libs/shared/docs",
+    "shared-hooks": "libs/shared/hooks",
+    "shared-types": "libs/shared/types",
     "shared-ui": "libs/shared/ui"
   }
 }
