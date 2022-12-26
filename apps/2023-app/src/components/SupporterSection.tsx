@@ -18,7 +18,12 @@ const SupporterSection: FC = () => {
       <div className={styles.supporters}>
         {members.map((person, index) => {
           return (
-            <AvatarIcon key={index} url={person.url} alt={person.name} src={person?.iconName} />
+            <AvatarIcon
+              key={index}
+              url={person.url}
+              alt={person.name}
+              src={person?.iconFilename ? `../icons/${person?.iconFilename}` : person?.iconName}
+            />
           )
         })}
       </div>
