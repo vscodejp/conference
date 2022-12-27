@@ -48,7 +48,7 @@
 }
 
 .session {
-  @apply p-1.5 rounded text-2xl shadow-session mb-px;
+  @apply p-1.5 rounded text-2xl shadow-session mb-px min-h-[200px];
 }
 
 @supports (display: grid) {

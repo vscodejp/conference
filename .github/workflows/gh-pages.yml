@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-  #  pull_request:
-  #    branches:
-  #      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-deploy:
@@ -46,6 +46,8 @@ jobs:
           yarn 2023-app:build
         env:
           CI: true
+          NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
+          NEXT_PUBLIC_NEWT_API_TOKEN: ${{ secrets.NEXT_PUBLIC_NEWT_API_TOKEN }}
           URL_PREFIX: conference
           GITHUB_PAGES: true
 

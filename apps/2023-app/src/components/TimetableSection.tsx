@@ -2,15 +2,18 @@ import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
 import { Popover as _Popover } from '@headlessui/react'
 import i18next from 'i18next'
-import { useDateTime, useString } from '@conference/shared/hooks'
+import { useDateTime } from '@conference/shared/hooks'
+import { INewtSession } from '@conference/shared/types'
 import { DetailIcon } from '@conference/shared/ui'
 import { Popover } from './modules/Popover'
-import { sessions } from '@contents/sessions'
 import styles from '@static/Schedule.module.scss'
 
-const TimetableSection: FC = () => {
-  const { capitalizeFirst } = useString()
-  const { formatTime } = useDateTime()
+interface TimetableSectionProps {
+  sessions: INewtSession[]
+}
+
+const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
+  const { getTimeStyle, formatTime } = useDateTime()
 
   return (
     <section id={'timetable'} className="w-10/12 ml-auto mr-auto pt-2 flex flex-col gap-4">
@@ -19,101 +22,84 @@ const TimetableSection: FC = () => {
       </h2>
       <div className={styles.schedule} aria-labelledby={'schedule-heading'}>
         <Fragment>
-          {sessions.map((session, index) => {
+          {sessions?.map((session, index) => {
             return (
               <Fragment key={index}>
                 <h2
                   className={styles.timeslot}
                   aria-hidden={'true'}
                   style={{
-                    gridRow: `time-${session.startTime} ${
-                      session.tracks.length > 1 ? '/time-' + session.endTime : ''
+                    gridRow: `time-${getTimeStyle(session.started_at)} ${
+                      session.area !== 'main' ? '/time-' + getTimeStyle(session.ended_at) : ''
                     }`,
                   }}
                 >
-                  {formatTime(session.startTime)}
+                  {formatTime(session.started_at)}
                 </h2>
-                <Fragment>
-                  {session.tracks.map((track, key) => {
-                    return (
-                      <Fragment key={key}>
-                        {track.presenterTitle === '' || track.presenterTitle === null ? (
-                          <div />
-                        ) : track.presenterTitle === 'Rest' || track.presenterTitle === 'Lunch' ? (
-                          <div
-                            className={`${styles.session} ${styles.rest}`}
-                            aria-hidden={'true'}
-                            style={{
-                              gridColumn: 2,
-                              gridRow: `time-${session.startTime} time-${session.endTime}`,
-                            }}
-                          >
-                            {track.presenterTitle === 'Rest'
-                              ? i18next.t('rest_ask_the_speaker')
-                              : i18next.t('lunch_rest')}
-                          </div>
-                        ) : (
-                          <div
-                            className={`${styles.session} ${styles.track1}`}
-                            style={{
-                              gridColumn: 2,
-                              gridRow: `time-${session.startTime} time-${session.endTime}`,
-                            }}
-                          >
-                            <Popover
-                              content={
-                                <Fragment>
-                                  <h4 className="flex items-start justify-start text-2xl">
-                                    {track.presenterTitle}
-                                  </h4>
-                                  <h5 className="text-right text-lg">{track.presenterName}</h5>
-                                  {track.presenterLive && (
-                                    <div className="border border-solid border-error to-transparent inline-block px-1.5 mr-2 text-lg font-medium leading-4 rounded">
-                                      {'Live'}
-                                    </div>
-                                  )}
-                                  <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
-                                    {i18next.t('bio')}
-                                  </h6>
-                                  <p
-                                    className="p-0 m-0 text-sm"
-                                    dangerouslySetInnerHTML={{ __html: track.presenterBio }}
-                                  />
-                                  <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
-                                    {i18next.t('session_description')}
-                                  </h6>
-                                  <p
-                                    className="p-0 m-0 text-sm"
-                                    dangerouslySetInnerHTML={{ __html: track.presenterDescription }}
-                                  />
-                                </Fragment>
-                              }
-                            >
-                              <_Popover.Button className="to-transparent border-0 flex relative text-xl no-underline text-center py-4 text-white cursor-pointer">
-                                {track.presenterName}
-                                <div className="w-4 h-4 ml-2">
-                                  <DetailIcon />
-                                </div>
-                              </_Popover.Button>
-                            </Popover>
-                            <h3 className={styles.sessionTitle}>
-                              <div>
-                                <p>{track.presenterTitle}</p>
-                              </div>
-                            </h3>
-                            <h4 className={styles.sessionTime}>
-                              {`${formatTime(session.startTime)} - ${formatTime(session.endTime)}`}
-                            </h4>
-                            <p className={styles.sessionPresenter}>
-                              {capitalizeFirst(track.personType)}
-                              {track.presenterLevel && ` / ${i18next.t(track.presenterLevel)}`}
-                            </p>
-                          </div>
-                        )}
-                      </Fragment>
-                    )
-                  })}
-                </Fragment>
+                {session.title === '' ? (
+                  <div />
+                ) : session.title === 'Rest' ? (
+                  <div
+                    className={`${styles.session} ${styles.rest}`}
+                    aria-hidden={'true'}
+                    style={{
+                      gridColumn: 2,
+                      gridRow: `time-${session.started_at} time-${session.ended_at}`,
+                    }}
+                  >
+                    {session.title === 'Rest'
+                      ? i18next.t('rest_ask_the_speaker')
+                      : i18next.t('lunch_rest')}
+                  </div>
+                ) : (
+                  <div
+                    className={`${styles.session} ${styles.track1}`}
+                    style={{
+                      gridColumn: 2,
+                      gridRow: `time-${session.started_at} time-${session.ended_at}`,
+                    }}
+                  >
+                    <Popover
+                      content={
+                        <Fragment>
+                          <h4 className="flex items-start justify-start text-2xl">
+                            {session.title}
+                          </h4>
+                          <h5 className="text-right text-lg">{session.speaker.name}</h5>
+                          <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
+                            {i18next.t('bio')}
+                          </h6>
+                          <p
+                            className="p-0 m-0 text-sm"
+                            dangerouslySetInnerHTML={{ __html: session.description }}
+                          />
+                          <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
+                            {i18next.t('session_description')}
+                          </h6>
+                          <p
+                            className="p-0 m-0 text-sm"
+                            dangerouslySetInnerHTML={{ __html: session.speaker.description }}
+                          />
+                        </Fragment>
+                      }
+                    >
+                      <_Popover.Button className="to-transparent border-0 flex relative text-xl no-underline text-left py-4 text-white cursor-pointer">
+                        <div className="flex items-start justify-start">{session.title}</div>
+                        <div className="w-4 h-4 ml-2">
+                          <DetailIcon />
+                        </div>
+                      </_Popover.Button>
+                    </Popover>
+                    <h3 className={styles.sessionTitle}>
+                      <div>
+                        <p>{session.speaker.name}</p>
+                      </div>
+                    </h3>
+                    <h4 className={styles.sessionTime}>
+                      {`${formatTime(session.started_at)} - ${formatTime(session.ended_at)}`}
+                    </h4>
+                  </div>
+                )}
               </Fragment>
             )
           })}
