@@ -44,6 +44,12 @@
         "cwd": "apps/2021-app",
         "parallel": false
       }
+    },
+    "typecheck": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "tsc --noEmit -p apps/2021-app/tsconfig.lib.json"
+      }
     }
   },
   "tags": []
