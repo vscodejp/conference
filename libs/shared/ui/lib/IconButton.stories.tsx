@@ -1,17 +1,18 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import { Button, ButtonProps } from './Button'
+import { IconButton, IconButtonProps } from './IconButton'
 
 export default {
-  component: Button,
-  title: 'Button',
+  component: IconButton,
+  title: 'IconButton',
 } as Meta
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
   path: '/',
   tooltip: 'example',
+  isTwitter: true,
   children: 'Click me!',
 }

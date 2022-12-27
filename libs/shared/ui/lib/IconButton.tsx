@@ -2,7 +2,7 @@ import React from 'react'
 import { TwitterIcon } from '../assets/Icon'
 import { tweetButton } from './IconButton.styles'
 
-interface IconButtonProps {
+export interface IconButtonProps {
   href: string
   tooltip: string
   isExternalLink?: boolean
