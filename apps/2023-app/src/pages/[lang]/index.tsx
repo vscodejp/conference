@@ -12,12 +12,14 @@ import StaffSection from '@components/StaffSection'
 import SupporterSection from '@components/SupporterSection'
 import FooterSection from '@components/FooterSection'
 
+import { INewtSession, INewtSpeaker } from '@conference/shared/types'
+import { fetchCMS } from '@lib/NewtClient'
 import { conferenceNameWithYear } from '@utils/constants'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import { urlPrefix } from '@utils/endpoints.constants'
 import { PLAYER, SOCIAL, SUPPORTER, TIMETABLE } from '@utils/feature'
 
-export default function Home() {
+export default function Home({ sessions, sessionTotal }) {
   return (
     <Fragment>
       <SEO />
@@ -34,7 +36,7 @@ export default function Home() {
           {SOCIAL && <SocialSection />}
           <AboutSection />
           {PLAYER && <PlayerSection.MainEventPlayer />}
-          {TIMETABLE && <TimetableSection />}
+          {TIMETABLE && sessionTotal !== 0 && <TimetableSection sessions={sessions} />}
           <StaffSection />
           {SUPPORTER && <SupporterSection />}
         </main>
@@ -55,9 +57,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const { data: sessions, total: sessionTotal } = await fetchCMS<INewtSession>('session')
+  const { data: speakers, total: speakerTotal } = await fetchCMS<INewtSpeaker>('speaker')
   return {
     props: {
       language: languages.includes(params.lang) ? params.lang : defaultLanguage,
+      sessions: sessions.sort((a, b) => {
+        if (a.started_at < b.started_at) return -1
+        if (a.started_at > b.started_at) return 1
+        return 0
+      }),
+      sessionTotal,
+      // スピーカーは不使用
+      speakers,
+      speakerTotal,
     },
   }
 }
