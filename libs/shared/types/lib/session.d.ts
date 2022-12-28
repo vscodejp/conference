@@ -34,7 +34,6 @@ export interface INewtImage {
 
 export interface INewtSpeaker {
   name: string
-  title: string
   affiliation: string
   description: string
   image: INewtImage
