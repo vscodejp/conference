@@ -2,7 +2,7 @@ import React from 'react'
 import { link, linkInfo, wrapper } from './Avatar.styles'
 
 export interface AvatarIconProps {
-  url: string
+  url?: string
   alt: string
   src: string
 }
