@@ -1,6 +1,11 @@
+import dayjs from 'dayjs'
+
 export function useDateTime() {
-  const formatTime = (str: string) => {
-    return str == null ? '' : str.slice(0, 2) + ':' + str.slice(2)
+  const getTimeStyle = (str: string) => {
+    return str == null ? '' : formatTime(str).slice(0, 2) + ':' + formatTime(str).slice(2)
   }
-  return { formatTime }
+  const formatTime = (str: string) => {
+    return dayjs(str).format('HH:mm')
+  }
+  return { getTimeStyle, formatTime }
 }

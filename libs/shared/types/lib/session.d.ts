@@ -19,3 +19,33 @@ export interface ISession {
   startTime: string
   endTime?: string
 }
+
+export type Area = 'main'
+
+export interface INewtImage {
+  _id: string
+  src: string
+  fileType: 'image/png'
+  fileSize: number
+  fileName: string
+  width: number
+  height: number
+}
+
+export interface INewtSpeaker {
+  name: string
+  affiliation: string
+  description: string
+  image: INewtImage
+  twitter: string
+  facebook: string
+}
+
+export interface INewtSession {
+  title: string
+  description: string
+  started_at: string
+  ended_at: string
+  speaker: INewtSpeaker
+  area: Area
+}
