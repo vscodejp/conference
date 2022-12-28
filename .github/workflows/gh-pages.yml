@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-  #  pull_request:
-  #    branches:
-  #      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-deploy:
@@ -46,6 +46,8 @@ jobs:
           yarn 2023-app:build
         env:
           CI: true
+          NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
+          NEXT_PUBLIC_NEWT_API_TOKEN: ${{ secrets.NEXT_PUBLIC_NEWT_API_TOKEN }}
           URL_PREFIX: conference
           GITHUB_PAGES: true
 
@@ -59,6 +61,12 @@ jobs:
           rm -rf docs/2021 docs/2022-2023
           mv dist/apps/2021-app/exported docs/2021
           mv dist/apps/2023-app/exported docs/2022-2023
+        env:
+          CI: true
+          NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
+          NEXT_PUBLIC_NEWT_API_TOKEN: ${{ secrets.NEXT_PUBLIC_NEWT_API_TOKEN }}
+          URL_PREFIX: conference
+          GITHUB_PAGES: true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

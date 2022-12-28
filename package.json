@@ -78,6 +78,8 @@
     "imagemin-optipng": "8.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "10.0.1",
+    "markuplint": "^3.0.0",
+    "newt-client-js": "^3.2.2",
     "prettier": "2.6.2",
     "sass": "1.55.0",
     "stylelint": "13.13.1",
@@ -90,4 +92,3 @@
     "vite": "^3.2.2"
   }
 }
-
