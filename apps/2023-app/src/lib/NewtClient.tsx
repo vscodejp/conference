@@ -1,5 +1,5 @@
 import { createClient } from 'newt-client-js'
-import { INewtSession, INewtSpeaker } from 'root/../../libs/shared/types'
+import { INewtSession, INewtSpeaker } from '@conference/shared/types'
 
 const client = createClient({
   spaceUid: process.env.NEXT_PUBLIC_NEWT_SPACE_UID,

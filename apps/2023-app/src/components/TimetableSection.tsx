@@ -44,7 +44,9 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                     aria-hidden={'true'}
                     style={{
                       gridColumn: 2,
-                      gridRow: `time-${session.started_at} time-${session.ended_at}`,
+                      gridRow: `time-${getTimeStyle(session.started_at)} time-${getTimeStyle(
+                        session.ended_at,
+                      )}`,
                     }}
                   >
                     {session.title === 'Rest'
@@ -56,7 +58,9 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                     className={`${styles.session} ${styles.track1}`}
                     style={{
                       gridColumn: 2,
-                      gridRow: `time-${session.started_at} time-${session.ended_at}`,
+                      gridRow: `time-${getTimeStyle(session.started_at)} time-${getTimeStyle(
+                        session.ended_at,
+                      )}`,
                     }}
                   >
                     <Popover
@@ -71,14 +75,14 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
-                            dangerouslySetInnerHTML={{ __html: session.description }}
+                            dangerouslySetInnerHTML={{ __html: session.speaker.description }}
                           />
                           <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
                             {i18next.t('session_description')}
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
-                            dangerouslySetInnerHTML={{ __html: session.speaker.description }}
+                            dangerouslySetInnerHTML={{ __html: session.description }}
                           />
                         </Fragment>
                       }
