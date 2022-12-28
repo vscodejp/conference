@@ -1,6 +1,6 @@
 interface Member {
   name: string
-  url: string
+  url?: string
   iconName?: string
   iconFilename?: string
 }
