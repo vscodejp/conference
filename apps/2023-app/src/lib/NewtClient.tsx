@@ -1,5 +1,5 @@
 import { createClient } from 'newt-client-js'
-import { INewtSession, INewtSpeaker } from '@conference/shared/types'
+import { INewtSession, INewtSpeaker, INewtSupporter } from '@conference/shared/types'
 
 const client = createClient({
   spaceUid: process.env.NEXT_PUBLIC_NEWT_SPACE_UID,
@@ -7,7 +7,7 @@ const client = createClient({
   apiType: 'cdn',
 })
 
-export async function fetchCMS<T extends INewtSession | INewtSpeaker>(model) {
+export async function fetchCMS<T extends INewtSession | INewtSpeaker | INewtSupporter>(model) {
   const page = 1
   const limit = 10
   const skip = (page - 1) * limit

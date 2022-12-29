@@ -12,14 +12,14 @@ import StaffSection from '@components/StaffSection'
 import SupporterSection from '@components/SupporterSection'
 import FooterSection from '@components/FooterSection'
 
-import { INewtSession, INewtSpeaker } from '@conference/shared/types'
+import { INewtSession, INewtSpeaker, INewtSupporter } from '@conference/shared/types'
 import { fetchCMS } from '@lib/NewtClient'
 import { conferenceNameWithYear } from '@utils/constants'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import { urlPrefix } from '@utils/endpoints.constants'
 import { PLAYER, SOCIAL, SUPPORTER, TIMETABLE } from '@utils/feature'
 
-export default function Home({ sessions, sessionTotal }) {
+export default function Home({ sessions, sessionTotal, supporters, supporterTotal }) {
   return (
     <Fragment>
       <SEO />
@@ -38,7 +38,7 @@ export default function Home({ sessions, sessionTotal }) {
           {PLAYER && <PlayerSection.MainEventPlayer />}
           {TIMETABLE && sessionTotal !== 0 && <TimetableSection sessions={sessions} />}
           <StaffSection />
-          {SUPPORTER && <SupporterSection />}
+          {SUPPORTER && supporterTotal != 0 && <SupporterSection supporters={supporters} />}
         </main>
       </div>
 
@@ -59,6 +59,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { data: sessions, total: sessionTotal } = await fetchCMS<INewtSession>('session')
   const { data: speakers, total: speakerTotal } = await fetchCMS<INewtSpeaker>('speaker')
+  const { data: supporters, total: supporterTotal } = await fetchCMS<INewtSupporter>('supporter')
   return {
     props: {
       language: languages.includes(params.lang) ? params.lang : defaultLanguage,
@@ -68,6 +69,8 @@ export async function getStaticProps({ params }) {
         return 0
       }),
       sessionTotal,
+      supporters,
+      supporterTotal,
       // スピーカーは不使用
       speakers,
       speakerTotal,
