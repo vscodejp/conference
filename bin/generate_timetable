@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-curl -s \
+BODY=`curl -s \
   -X GET \
   -H "Authorization: Bearer ${NEXT_PUBLIC_NEWT_API_TOKEN}" \
   "https://${NEXT_PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/conf2023/session" | cat | jq \
   '.items[] | {title: .title, started_at: (.started_at | strptime("%Y-%m-%dT%H:%M:%S.000Z") | 
   mktime + (60 * 60 * 9) | strftime("%H:%M")), ended_at: (.ended_at  | strptime("%Y-%m-%dT%H:%M:%S.000Z") | 
   mktime + (60 * 60 * 9) | strftime("%H:%M")), name: .speaker.name}  | 
-  .line = "| " + .started_at + " ～  " + .ended_at +  " | " + .title + " | " + .name + " |" | .line' -r | sort
+  .line = "| " + .started_at + " ～  " + .ended_at +  " | " + .title + " | " + .name + " |" | .line' -r | sort`
+
+cat << EOF > /tmp/timetable.md
+| 時間 | Sessions| Speaker | 
+| :-- | :-- | :-- |
+$BODY
+EOF

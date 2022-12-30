@@ -9,12 +9,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: generate
         run: |
-          BODY=`bash bin/generate_timetable`
-          cat << EOF >> /tmp/timetable.md
-          | 時間 | Sessions| Speaker | 
-          | :-- | :-- | :-- |
-          $BODY
-          EOF
+          bash bin/generate_timetable
+        env:
+          NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
+          NEXT_PUBLIC_NEWT_API_TOKEN: ${{ secrets.NEXT_PUBLIC_NEWT_API_TOKEN }}
       - uses: actions/upload-artifact@v3
         with:
           name: Timetable
