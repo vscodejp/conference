@@ -2,19 +2,20 @@ name: Generate timetable markdown
 on:
   workflow_dispatch:
 jobs:
-  generate:
+  generate-and-upload:
     name: Generate timetable markdown file
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-        BODY=`bash bin/generate_timetable`
-        cat << EOF >> /tmp/timetable.md
-        | 時間 | Sessions| Speaker | 
-        | :-- | :-- | :-- |
-        $BODY
-        EOF
+      - name: generate
+        run: |
+          BODY=`bash bin/generate_timetable`
+          cat << EOF >> /tmp/timetable.md
+          | 時間 | Sessions| Speaker | 
+          | :-- | :-- | :-- |
+          $BODY
+          EOF
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: Timetable
           path: /tmp/timetable.md
