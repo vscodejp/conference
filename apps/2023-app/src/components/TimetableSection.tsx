@@ -75,14 +75,18 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
-                            dangerouslySetInnerHTML={{ __html: session.speaker.description }}
+                            dangerouslySetInnerHTML={{
+                              __html: session.speaker.description.replace(/\r?\n/g, '<br>'),
+                            }}
                           />
                           <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
                             {i18next.t('session_description')}
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
-                            dangerouslySetInnerHTML={{ __html: session.description }}
+                            dangerouslySetInnerHTML={{
+                              __html: session.description.replace(/\r?\n/g, '<br>'),
+                            }}
                           />
                         </Fragment>
                       }
