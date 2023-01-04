@@ -14,7 +14,7 @@ export default function Home({ terms }) {
     <Fragment>
       <NavSection />
 
-      <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center">
+      <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center text-gray-700 dark:text-gray-200">
         <h2 className="m-0 leading-5 text-xl">{i18next.t('code_of_conduct')}</h2>
 
         <div className="flex items-center justify-center flex-wrap max-w-5xl my-2">
