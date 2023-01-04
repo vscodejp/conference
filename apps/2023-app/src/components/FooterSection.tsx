@@ -37,18 +37,6 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href={`${urlPrefix}/${lang}/privacy-policy`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800"
-                  aria-label="Link to Privacy Policy"
-                  aria-describedby={i18next.t('privacy_policy')}
-                >
-                  {i18next.t('privacy_policy')}
-                </a>
-              </li>
-              <li>
-                <a
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
