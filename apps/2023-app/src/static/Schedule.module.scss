@@ -22,12 +22,12 @@
       [time-1605] auto
       [time-1620] auto;
     grid-template-columns:
-      [times] 4em
+      [times] 6em
       [track1-start] 1fr;
     //[track1-end track2-end] 1fr;
     grid-gap: 1em;
 
-    @apply grid self-center w-2/3;
+    @apply grid self-center w-full;
   }
 }
 

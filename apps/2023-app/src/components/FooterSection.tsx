@@ -37,7 +37,7 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href=""
+                  href={`${urlPrefix}/${lang}/contact`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
