@@ -18,7 +18,7 @@ export default function Home() {
           <div className="flex items-center justify-center flex-wrap max-w-5xl my-2">
             <Button
               path={
-                'https://docs.google.com/forms/d/e/1FAIpQLSeDsAlBwncykjmyia0Z-7W-1IMIPHBGZisRZJT_KZ8J8y6rRQ/viewform'
+                'https://docs.google.com/forms/d/e/1FAIpQLSdK_V1uIMzh2RkvCod86dytZ-Ww3D6GvCFrpqlQX5zsfLQYxA/viewform'
               }
               tooltip={i18next.t('there_is_google_form')}
               isExternalLink
