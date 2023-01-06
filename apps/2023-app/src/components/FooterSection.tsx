@@ -19,7 +19,7 @@ const FooterSection: FC = () => {
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-100 tracking-widest text-sm mb-3">
               Documents
             </h2>
             <nav className="list-none mb-10">
@@ -35,7 +35,7 @@ const FooterSection: FC = () => {
               </li>
               <li>
                 <a
-                  href={`${urlPrefix}/${lang}/contact`}
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdK_V1uIMzh2RkvCod86dytZ-Ww3D6GvCFrpqlQX5zsfLQYxA/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
@@ -48,7 +48,7 @@ const FooterSection: FC = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-100 tracking-widest text-sm mb-3">
               Past Events
             </h2>
             <nav className="list-none mb-10">
@@ -79,7 +79,7 @@ const FooterSection: FC = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 dark:text-gray-100 tracking-widest text-sm mb-3">
               VS Code
             </h2>
             <nav className="list-none mb-10">
