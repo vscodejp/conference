@@ -26,8 +26,6 @@ const FooterSection: FC = () => {
               <li>
                 <a
                   href={`${urlPrefix}/${lang}/code-for-conduct`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
                   aria-label="Link to Code for Conduct"
                   aria-describedby={i18next.t('code_of_conduct')}
