@@ -47,12 +47,7 @@ const NavSection: FC = () => {
           <Link href={`/${lang}/#supporters`} className={styles.link}>
             {i18next.t('supporters')}
           </Link>
-          <a
-            href="#"
-            aria-label="switch color theme"
-            aria-describedby="Switch Color Theme"
-            className={styles.link}
-          >
+          <a href="#" aria-label="switch color theme" className={styles.link}>
             <ColorThemeSwitch />
           </a>
         </nav>

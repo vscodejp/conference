@@ -1,6 +1,6 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
-import { Popover as _Popover } from '@headlessui/react'
+import { Popover as Parent } from '@headlessui/react'
 import i18next from 'i18next'
 import { useDateTime, useString } from '@conference/shared/hooks'
 import { DetailIcon } from '@conference/shared/ui'
@@ -13,7 +13,7 @@ const Schedule: FC = () => {
   const { capitalizeFirst } = useString()
 
   return (
-    <div className={styles.schedule} aria-labelledby={'schedule-heading'}>
+    <div className={styles.schedule}>
       <Fragment>
         {tracks.map((track: string, val: number) => {
           return (
@@ -77,10 +77,10 @@ const Schedule: FC = () => {
                             </Fragment>
                           }
                         >
-                          <_Popover.Button className={styles.title}>
+                          <Parent.Button className={styles.title}>
                             {track.presenterName}
                             <DetailIcon />
-                          </_Popover.Button>
+                          </Parent.Button>
                         </Popover>
                         <h3 className={styles.sessionTitle}>
                           <div>

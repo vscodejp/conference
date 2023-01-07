@@ -2,14 +2,7 @@ import React from 'react'
 
 export const DetailIcon = () => {
   return (
-    <svg
-      version="1.1"
-      id="_x32_"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 512 512"
-    >
+    <svg x="0px" y="0px" viewBox="0 0 512 512">
       <g>
         <path
           className="st0"
@@ -36,14 +29,7 @@ export const DetailIcon = () => {
 
 export const TwitterIcon = () => {
   return (
-    <svg
-      version="1.1"
-      id="_x32_"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-    >
+    <svg width="24" height="24" viewBox="0 0 24 24">
       <path
         className="st0"
         fill="#fff"

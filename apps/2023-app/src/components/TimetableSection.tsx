@@ -1,6 +1,6 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
-import { Popover as _Popover } from '@headlessui/react'
+import { Popover as Parent } from '@headlessui/react'
 import i18next from 'i18next'
 import { useDateTime } from '@conference/shared/hooks'
 import { INewtSession } from '@conference/shared/types'
@@ -20,7 +20,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
       <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
         {i18next.t('timetable')}
       </h2>
-      <div className={styles.schedule} aria-labelledby={'schedule-heading'}>
+      <div className={styles.schedule}>
         <Fragment>
           {sessions?.map((session, index) => {
             return (
@@ -91,12 +91,12 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                         </Fragment>
                       }
                     >
-                      <_Popover.Button className="to-transparent border-0 flex relative text-xl no-underline text-left py-4 text-white cursor-pointer">
+                      <Parent.Button className="to-transparent border-0 flex relative text-xl no-underline text-left py-4 text-white cursor-pointer">
                         <div className="flex items-start justify-start">{session.title}</div>
                         <div className="w-4 h-4 ml-2">
                           <DetailIcon />
                         </div>
-                      </_Popover.Button>
+                      </Parent.Button>
                     </Popover>
                     <h3 className={styles.sessionTitle}>
                       <div>

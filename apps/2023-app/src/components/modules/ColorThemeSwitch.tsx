@@ -11,11 +11,7 @@ export const ColorThemeSwitch: FC = () => {
   const { mounted } = useOnMounted()
 
   return (
-    <div
-      className="transition duration-500 ease-in-out rounded-full p-2"
-      aria-label="switch color theme"
-      aria-describedby="Switch Color Theme"
-    >
+    <div className="transition duration-500 ease-in-out rounded-full p-2">
       {mounted && colorTheme.colorMode === 'dark' ? (
         <FaSun
           onClick={() =>

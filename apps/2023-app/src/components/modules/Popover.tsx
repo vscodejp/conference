@@ -1,6 +1,6 @@
 import { FCWithChildren } from 'root/react-app-env'
 import { ReactNode } from 'react'
-import { Popover as _Popover } from '@headlessui/react'
+import { Popover as Parent } from '@headlessui/react'
 import { useOnMounted } from '@conference/shared/hooks'
 
 interface PopoverProps {
@@ -14,13 +14,13 @@ export const Popover: FCWithChildren<PopoverProps> = (props) => {
   const { mounted } = useOnMounted()
 
   return (
-    <_Popover className="relative">
+    <Parent className="relative">
       {children}
       {mounted && (
-        <_Popover.Panel className="translate-[0, 10px] absolute l-0 p-6 w-9/10 z-30 text-neutral-900 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-900">
+        <Parent.Panel className="translate-[0, 10px] absolute l-0 p-6 w-9/10 z-30 text-neutral-900 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-900">
           {content}
-        </_Popover.Panel>
+        </Parent.Panel>
       )}
-    </_Popover>
+    </Parent>
   )
 }

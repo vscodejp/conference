@@ -16,8 +16,9 @@ export const ColorThemeSwitch: FC = () => {
 
   return (
     <span className={styles.switch}>
-      <input type="checkbox" checked={isChecked} onChange={handleChange} />
+      <input type="checkbox" id="color-theme-switch" checked={isChecked} onChange={handleChange} />
       <label
+        htmlFor="color-theme-switch"
         style={{
           border: isChecked ? '#767676' : '#fff',
           background: isChecked ? '#03256c' : '#fff',
