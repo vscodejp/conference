@@ -1,6 +1,6 @@
 import { FCWithChildren } from 'root/react-app-env'
 import { ReactNode, useContext } from 'react'
-import { Popover as _Popover } from '@headlessui/react'
+import { Popover as Parent } from '@headlessui/react'
 import { useOnMounted } from '@conference/shared/hooks'
 import { ColorThemeContext } from '@lib/ColorThemeContext'
 import styles from '@static/Popover.module.scss'
@@ -23,13 +23,13 @@ export const Popover: FCWithChildren<PopoverProps> = (props) => {
       : { backgroundColor: '#252526', color: '#fefefe' }
 
   return (
-    <_Popover className={styles.popover_wrapper}>
+    <Parent className={styles.popover_wrapper}>
       {children}
       {mounted && (
-        <_Popover.Panel className={styles.popover_content} style={contentStyles}>
+        <Parent.Panel className={styles.popover_content} style={contentStyles}>
           {content}
-        </_Popover.Panel>
+        </Parent.Panel>
       )}
-    </_Popover>
+    </Parent>
   )
 }

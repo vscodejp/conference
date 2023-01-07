@@ -39,7 +39,8 @@
         "commands": [
           "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
           "eslint ./src --ext .tsx,.ts,.jsx,.js --fix",
-          "stylelint --config .stylelintrc.yml 'src/static/**/*.scss' --fix"
+          "stylelint --config .stylelintrc.yml 'src/static/**/*.scss' --fix",
+          "markuplint \"**/*.tsx\" --config .markuplintrc --format"
         ],
         "cwd": "apps/2021-app",
         "parallel": false

@@ -1,5 +1,5 @@
 import React from 'react'
-import { discriptionInfo, link, linkInfo,linkInfoItem, wrapper } from './Avatar.styles'
+import { discriptionInfo, link, linkInfo, linkInfoItem, wrapper } from './Avatar.styles'
 
 export interface AvatarIconProps {
   url?: string

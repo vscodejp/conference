@@ -59,7 +59,6 @@ const FooterSection: FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
                   aria-label="Link to VS Code Conference JP 2022 - 2023"
-                  aria-describedby="VS Code Conference JP 2022 - 2023 Website"
                 >
                   {'Conference 2022 - 2023'}
                 </a>
@@ -71,7 +70,6 @@ const FooterSection: FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
                   aria-label="Link to VS Code Conference JP 2021"
-                  aria-describedby="VS Code Conference JP 2021 Website"
                 >
                   {'Conference 2021'}
                 </a>
@@ -82,7 +80,7 @@ const FooterSection: FC = () => {
             <h2 className="title-font font-medium text-gray-900 dark:text-gray-100 tracking-widest text-sm mb-3">
               VS Code
             </h2>
-            <nav className="list-none mb-10">
+            <ul className="list-none mb-10">
               <li>
                 <a
                   href="https://vscode.dev"
@@ -93,7 +91,7 @@ const FooterSection: FC = () => {
                   VSCode.dev
                 </a>
               </li>
-            </nav>
+            </ul>
           </div>
         </div>
       </div>

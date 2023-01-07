@@ -46,6 +46,8 @@
   "devDependencies": {
     "@emotion/babel-plugin": "11.10.5",
     "@emotion/react": "11.10.5",
+    "@markuplint/jsx-parser": "3.0.1",
+    "@markuplint/react-spec": "3.0.1",
     "@nrwl/cli": "15.3.3",
     "@nrwl/cypress": "15.3.3",
     "@nrwl/eslint-plugin-nx": "15.3.3",
@@ -78,7 +80,7 @@
     "imagemin-optipng": "8.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "10.0.1",
-    "markuplint": "^3.0.0",
+    "markuplint": "3.0.0",
     "newt-client-js": "^3.2.2",
     "prettier": "2.6.2",
     "sass": "1.55.0",
