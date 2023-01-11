@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import Head from 'next/head'
 import i18next from 'i18next'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import ReactMarkdown from 'react-markdown'
@@ -12,6 +13,10 @@ import { urlPrefix } from '@utils/endpoints.constants'
 export default function Home({ terms }) {
   return (
     <Fragment>
+      <Head>
+        <title>{i18next.t('code_of_conduct')}</title>
+        <link rel="icon" href={`${urlPrefix}/favicon.ico`} />
+      </Head>
       <NavSection />
 
       <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center text-gray-700 dark:text-gray-200">
