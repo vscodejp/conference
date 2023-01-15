@@ -1,5 +1,5 @@
 import { FC } from 'root/react-app-env'
-import i18next from 'i18next'
+import i18next, { t } from 'i18next'
 import { conferenceNameWithYear, organizationName } from '@utils/constants'
 import { urlPrefix } from '@utils/endpoints.constants'
 
@@ -28,9 +28,9 @@ const FooterSection: FC = () => {
                   href={`${urlPrefix}/${lang}/code-for-conduct`}
                   className="text-gray-600 hover:text-gray-800"
                   aria-label="Link to Code for Conduct"
-                  aria-describedby={i18next.t('code_of_conduct')}
+                  aria-describedby={t('code_of_conduct')}
                 >
-                  {i18next.t('code_of_conduct')}
+                  {t('code_of_conduct')}
                 </a>
               </li>
               <li>
@@ -40,9 +40,9 @@ const FooterSection: FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800"
                   aria-label="Link to Contact"
-                  aria-describedby={i18next.t('contact')}
+                  aria-describedby={t('contact')}
                 >
-                  {i18next.t('contact')}
+                  {t('contact')}
                 </a>
               </li>
             </nav>

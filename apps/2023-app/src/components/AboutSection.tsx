@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { FC } from 'root/react-app-env'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { conferenceNameWithYear } from '@utils/constants'
 import { APPLY } from '@utils/feature'
 
@@ -12,9 +12,7 @@ const AboutSection: FC = () => {
           <h2 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 dark:text-gray-300 mb-4">
             {conferenceNameWithYear}
           </h2>
-          <h3 className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            {i18next.t('explain')}
-          </h3>
+          <h3 className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">{t('explain')}</h3>
         </div>
         {APPLY && (
           <Fragment>
@@ -22,11 +20,11 @@ const AboutSection: FC = () => {
               <a
                 href="https://vscode.connpass.com/event/263206/"
                 className="inline-flex text-white dark:text-white bg-emphasis border-0 py-4 px-16 focus:outline-none hover:bg-detail4 rounded text-lg"
-                aria-label={i18next.t('apply_for_participation_from_connpass_form')}
+                aria-label={t('apply_for_participation_from_connpass_form')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {i18next.t('apply_for_participation_from_connpass_form')}
+                {t('apply_for_participation_from_connpass_form')}
               </a>
             </div>
           </Fragment>

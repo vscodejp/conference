@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { FC } from 'root/react-app-env'
 import Link from 'next/link'
-import i18next from 'i18next'
+import i18next, { t } from 'i18next'
 import styles from '@static/Header.module.scss'
 import { conferenceName } from '@utils/constants'
 
@@ -36,16 +36,16 @@ const NavSection: FC = () => {
       <div className={styles.links_wrapper}>
         <nav className={styles.links}>
           <Link href={`/${lang}/#about`} className={styles.link}>
-            {i18next.t('about')}
+            {t('about')}
           </Link>
           <Link href={`/${lang}/#timetable`} className={styles.link}>
-            {i18next.t('timetable')}
+            {t('timetable')}
           </Link>
           <Link href={`/${lang}/#staffs`} className={styles.link}>
-            {i18next.t('staffs')}
+            {t('staffs')}
           </Link>
           <Link href={`/${lang}/#supporters`} className={styles.link}>
-            {i18next.t('supporters')}
+            {t('supporters')}
           </Link>
           <a href="#" aria-label="switch color theme" className={styles.link}>
             <ColorThemeSwitch />

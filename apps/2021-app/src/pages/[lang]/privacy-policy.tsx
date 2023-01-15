@@ -1,4 +1,4 @@
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { defaultLanguage, languages } from 'root/i18n.config'
 import ReactMarkdown from 'react-markdown'
 import * as fs from 'fs'
@@ -15,14 +15,14 @@ export default function Home({ terms }) {
       <NavSection />
 
       <main className={styles.main}>
-        <h2 className={styles.title}>{i18next.t('privacy_policy')}</h2>
+        <h2 className={styles.title}>{t('privacy_policy')}</h2>
 
         <div className={styles.content}>
           <ReactMarkdown skipHtml={false}>{terms}</ReactMarkdown>
         </div>
 
-        <Button path={urlPrefix} tooltip={i18next.t('back_to_top')}>
-          {i18next.t('back_to_top')}
+        <Button path={urlPrefix} tooltip={t('back_to_top')}>
+          {t('back_to_top')}
         </Button>
       </main>
 

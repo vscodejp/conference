@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { FC } from 'root/react-app-env'
 import { FaBars } from 'react-icons/fa'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import styles from '@static/Header.module.scss'
 import { conferenceNameWithYear, simplyName } from '@utils/constants'
 import { DARK } from '@utils/feature'
@@ -40,10 +40,10 @@ const NavSection: FC = () => {
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           <div className="md:block hidden">
             <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
-              {i18next.t('about')}
+              {t('about')}
             </a>
             <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
-              {i18next.t('staffs')}
+              {t('staffs')}
             </a>
           </div>
           <FaBars
@@ -57,12 +57,12 @@ const NavSection: FC = () => {
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li className="list-none p-0 m-0 flex justify-center items-center">
                 <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
-                  {i18next.t('about')}
+                  {t('about')}
                 </a>
               </li>
               <li className="list-none p-0 m-0 flex justify-center items-center">
                 <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
-                  {i18next.t('staffs')}
+                  {t('staffs')}
                 </a>
               </li>
             </ul>

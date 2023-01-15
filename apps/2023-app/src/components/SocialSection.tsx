@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { FC } from 'root/react-app-env'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { IconButton } from '@conference/shared/ui'
 
 const SocialSection: FC = () => {
@@ -9,7 +9,7 @@ const SocialSection: FC = () => {
       <div className="py-1.5 flex items-center justify-center">
         <IconButton
           href="https://twitter.com/intent/tweet?hashtags=vscodejp_A"
-          tooltip={i18next.t('tweet_at_vscodejp_a')}
+          tooltip={t('tweet_at_vscodejp_a')}
           isExternalLink
           isTwitter
         >
@@ -17,7 +17,7 @@ const SocialSection: FC = () => {
         </IconButton>
         <IconButton
           href="https://twitter.com/i/spaces/1OdJrBagjMnJX"
-          tooltip={i18next.t('join_ask_the_speaker_at_a')}
+          tooltip={t('join_ask_the_speaker_at_a')}
           isExternalLink
           isTwitter
           showSpaces
@@ -28,7 +28,7 @@ const SocialSection: FC = () => {
       <div className="py-1.5 flex items-center justify-center">
         <IconButton
           href="https://twitter.com/intent/tweet?hashtags=vscodejp_B"
-          tooltip={i18next.t('tweet_at_vscodejp_b')}
+          tooltip={t('tweet_at_vscodejp_b')}
           isExternalLink
           isTwitter
         >
@@ -36,7 +36,7 @@ const SocialSection: FC = () => {
         </IconButton>
         <IconButton
           href="https://twitter.com/i/spaces/1DXxyDBqqLVJM"
-          tooltip={i18next.t('join_ask_the_speaker_at_b')}
+          tooltip={t('join_ask_the_speaker_at_b')}
           isExternalLink
           isTwitter
           showSpaces
@@ -46,7 +46,7 @@ const SocialSection: FC = () => {
       </div>
       <div
         className="w-full text-center text-lg py-1.5 rounded-lg"
-        dangerouslySetInnerHTML={{ __html: i18next.t('annotation_of_ask_the_speaker') }}
+        dangerouslySetInnerHTML={{ __html: t('annotation_of_ask_the_speaker') }}
       />
     </Fragment>
   )
