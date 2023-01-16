@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { FC } from 'root/react-app-env'
-import i18next from 'i18next'
+import { t } from 'i18next'
 // import Image from 'next/image'
 import { urlPrefix } from '@utils/endpoints.constants'
 import { APPLY } from '@utils/feature'
@@ -14,18 +14,18 @@ const ConceptSection: FC = () => {
           <h2 className="md:w-[32vw] w-full title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             {conferenceNameWithYear}
           </h2>
-          <h3 className="mb-8 leading-relaxed text-gray-300">{i18next.t('explain')}</h3>
+          <h3 className="mb-8 leading-relaxed text-gray-300">{t('explain')}</h3>
           <div className="flex justify-center">
             {APPLY && (
               <Fragment>
                 <a
                   href="https://vscode.connpass.com/event/263206/"
                   className="inline-flex text-white dark:text-white bg-emphasis border-0 py-2 px-8 focus:outline-none hover:bg-detail4 rounded text-lg "
-                  aria-label={i18next.t('apply_for_participation_from_connpass_form')}
+                  aria-label={t('apply_for_participation_from_connpass_form')}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {i18next.t('apply_for_participation_from_connpass_form')}
+                  {t('apply_for_participation_from_connpass_form')}
                 </a>
               </Fragment>
             )}

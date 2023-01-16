@@ -1,7 +1,7 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
 import { Popover as Parent } from '@headlessui/react'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { useDateTime, useString } from '@conference/shared/hooks'
 import { DetailIcon } from '@conference/shared/ui'
 import { Popover } from './modules/Popover'
@@ -54,7 +54,7 @@ const Schedule: FC = () => {
                           gridRow: `time-${session.startTime} time-${session.endTime}`,
                         }}
                       >
-                        {i18next.t('rest_ask_the_speaker')}
+                        {t('rest_ask_the_speaker')}
                       </div>
                     ) : (
                       <div
@@ -70,9 +70,9 @@ const Schedule: FC = () => {
                               <h4>{track.presenterTitle}</h4>
                               <h5 className={styles.align_right}>{track.presenterName}</h5>
                               {track.presenterLive && <p className={styles.tag}>{'Live'}</p>}
-                              <h6>{i18next.t('bio')}</h6>
+                              <h6>{t('bio')}</h6>
                               <p dangerouslySetInnerHTML={{ __html: track.presenterBio }} />
-                              <h6>{i18next.t('session_description')}</h6>
+                              <h6>{t('session_description')}</h6>
                               <p dangerouslySetInnerHTML={{ __html: track.presenterDescription }} />
                             </Fragment>
                           }
@@ -92,7 +92,7 @@ const Schedule: FC = () => {
                         </h4>
                         <div className={styles.sessionPresenter}>
                           {capitalizeFirst(track.personType)}
-                          {track.presenterLevel && ` / ${i18next.t(track.presenterLevel)}`}
+                          {track.presenterLevel && ` / ${t(track.presenterLevel)}`}
                         </div>
                       </div>
                     )}

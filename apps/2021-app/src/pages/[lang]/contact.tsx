@@ -1,4 +1,4 @@
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { defaultLanguage, languages } from 'root/i18n.config'
 
 import { Button } from '@conference/shared/ui'
@@ -12,17 +12,17 @@ export default function Home() {
       <NavSection />
 
       <main className={styles.main}>
-        <h2 className={styles.title}>{i18next.t('contact')}</h2>
+        <h2 className={styles.title}>{t('contact')}</h2>
 
         <div className={styles.content}>
           <Button
             path={
               'https://docs.google.com/forms/d/e/1FAIpQLSeDsAlBwncykjmyia0Z-7W-1IMIPHBGZisRZJT_KZ8J8y6rRQ/viewform'
             }
-            tooltip={i18next.t('there_is_google_form')}
+            tooltip={t('there_is_google_form')}
             isExternalLink
           >
-            {i18next.t('there_is_google_form')}
+            {t('there_is_google_form')}
           </Button>
         </div>
       </main>

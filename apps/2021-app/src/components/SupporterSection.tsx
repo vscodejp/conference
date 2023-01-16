@@ -1,5 +1,5 @@
 import { FC } from 'root/react-app-env'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { useArray } from '@conference/shared/hooks'
 import { AvatarIcon } from '@conference/shared/ui'
 import { supporters } from '@contents/supporters'
@@ -12,7 +12,7 @@ const SupporterSection: FC = () => {
 
   return (
     <section id="supporters" className={styles.section}>
-      <h2>{i18next.t('supporters')}</h2>
+      <h2>{t('supporters')}</h2>
       <div className={styles.supporters}>
         {members.map((person, index) => {
           return (

@@ -1,4 +1,4 @@
-import i18next from 'i18next'
+import { t } from 'i18next'
 
 import { Button } from '@conference/shared/ui'
 import NavSection from '@components/NavSection'
@@ -16,8 +16,8 @@ export default function Home() {
         <PreEventPlayer />
       </main>
 
-      <Button path={urlPrefix} tooltip={i18next.t('back_to_top')}>
-        {i18next.t('back_to_top')}
+      <Button path={urlPrefix} tooltip={t('back_to_top')}>
+        {t('back_to_top')}
       </Button>
 
       <FooterSection />

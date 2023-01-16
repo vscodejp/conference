@@ -1,7 +1,7 @@
 import { FC } from 'root/react-app-env'
 import { Fragment } from 'react'
 import { Popover as Parent } from '@headlessui/react'
-import i18next from 'i18next'
+import { t } from 'i18next'
 import { useDateTime } from '@conference/shared/hooks'
 import { INewtSession } from '@conference/shared/types'
 import { DetailIcon } from '@conference/shared/ui'
@@ -18,7 +18,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
   return (
     <section id={'timetable'} className="w-10/12 ml-auto mr-auto pt-2 flex flex-col gap-4">
       <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
-        {i18next.t('timetable')}
+        {t('timetable')}
       </h2>
       <div className={styles.schedule}>
         <Fragment>
@@ -49,9 +49,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                       )}`,
                     }}
                   >
-                    {session.title === 'Rest'
-                      ? i18next.t('rest_ask_the_speaker')
-                      : i18next.t('lunch_rest')}
+                    {session.title === 'Rest' ? t('rest_ask_the_speaker') : t('lunch_rest')}
                   </div>
                 ) : (
                   <div
@@ -71,7 +69,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                           </h4>
                           <h5 className="text-right text-lg">{session.speaker.name}</h5>
                           <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
-                            {i18next.t('bio')}
+                            {t('bio')}
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
@@ -80,7 +78,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                             }}
                           />
                           <h6 className="pl-2 my-2.5 text-sm border-l border-vscode before:bg-vscode after:bg-vscode">
-                            {i18next.t('session_description')}
+                            {t('session_description')}
                           </h6>
                           <p
                             className="p-0 m-0 text-sm"
