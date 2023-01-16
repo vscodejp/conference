@@ -26,7 +26,7 @@ export default function Home({ terms }) {
           <ReactMarkdown skipHtml={false}>{terms}</ReactMarkdown>
         </div>
 
-        <Button path={urlPrefix} tooltip={t('back_to_top')}>
+        <Button path="../" tooltip={t('back_to_top')}>
           {t('back_to_top')}
         </Button>
       </div>
