@@ -12,6 +12,7 @@ import StaffSection from '@components/StaffSection'
 import SupporterSection from '@components/SupporterSection'
 import FooterSection from '@components/FooterSection'
 import MapSection from '@components/MapSection'
+import LiveSection from '@components/LiveSection'
 
 import { INewtSession, INewtSpeaker, INewtSupporter } from '@conference/shared/types'
 import { fetchCMS } from '@lib/NewtClient'
@@ -33,6 +34,7 @@ export default function Home({ sessions, sessionTotal, supporters, supporterTota
 
       <div className="min-h-screen p-0 m-0 flex flex-col justify-center items-center">
         <main className="p-0 m-0">
+          <LiveSection />
           <ConceptSection />
           {SOCIAL && <SocialSection />}
           <AboutSection />

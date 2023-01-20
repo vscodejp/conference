@@ -44,6 +44,7 @@ module.exports = {
         detail4: '#c36feb',
         emphasis: '#ec28e0',
         error: '#f51d65',
+        youtube: '#ff0000',
       },
       maxWidth: {
         640: '640px',
