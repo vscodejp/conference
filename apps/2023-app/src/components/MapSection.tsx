@@ -5,7 +5,7 @@ import styles from '@static/Map.module.scss'
 
 const ConceptSection: FC = () => {
   return (
-    <section id={'map'} className="w-10/12 ml-auto mr-auto pt-2 flex flex-col gap-4">
+    <section id={'map'} className="w-10/12 mx-auto flex flex-col gap-4">
       <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
         {t('offline_venue')}
       </h2>
