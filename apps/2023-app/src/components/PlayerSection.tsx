@@ -13,7 +13,7 @@ const MainEventPlayer: FC = () => {
         <iframe
           src={'https://www.youtube.com/embed/UdFJaZdJvVw?autoplay=1&mute=1'}
           className={styles.player}
-          title={t('offline_venue')}
+          title={'VS Code Meetup YouTube channel'}
           loading="lazy"
         />
       </div>
