@@ -11,7 +11,7 @@ const MainEventPlayer: FC = () => {
       </h2>
       <div className={styles.container}>
         <iframe
-          src={'https://www.youtube.com/embed/wmjX6-mDsME?autoplay=1&mute=1'}
+          src={'https://www.youtube.com/embed/UdFJaZdJvVw?autoplay=1&mute=1'}
           className={styles.player}
           title={t('offline_venue')}
           loading="lazy"
