@@ -14,15 +14,10 @@ export const AvatarIcon = ({ url, alt, src, description }: AvatarIconProps) => {
       <a href={url} className={styles.link} target="_blank" rel="noreferrer">
         <img alt={alt} src={src} decoding="async" />
         <div className={styles.linkInfo}>
-          <div className={styles.linkInfoItem}>
-            {alt}
-            {description ? (
-              <p
-                dangerouslySetInnerHTML={{ __html: description }}
-                className={styles.description}
-              ></p>
-            ) : null}
-          </div>
+          {alt}
+          {description && (
+            <p dangerouslySetInnerHTML={{ __html: description }} className={styles.description} />
+          )}
         </div>
       </a>
     </div>

@@ -30,8 +30,9 @@ export const link = css`
 
 export const linkInfo = css`
   display: flex;
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
   margin-left: 12px;
   font-family: 'UD新ゴ B', sans-serif;
   font-size: 1.08rem;
@@ -39,14 +40,10 @@ export const linkInfo = css`
   min-width: 0;
 `
 
-export const linkInfoItem = css`
-  max-width: 100%;
-`
-
 export const description = css`
   font-size: 0.7rem;
   line-height: 0.8rem;
   overflow-wrap: break-word;
-  word-break: keep-all;
+  width: 400px;
   padding: 0 4px;
 `
