@@ -1,5 +1,5 @@
 import React from 'react'
-import { discriptionInfo, link, linkInfo, linkInfoItem, wrapper } from './Avatar.styles'
+import * as styles from './Avatar.styles'
 
 export interface AvatarIconProps {
   url?: string
@@ -10,14 +10,17 @@ export interface AvatarIconProps {
 
 export const AvatarIcon = ({ url, alt, src, description }: AvatarIconProps) => {
   return (
-    <div className={wrapper}>
-      <a href={url} className={link} target="_blank" rel="noreferrer">
+    <div className={styles.wrapper}>
+      <a href={url} className={styles.link} target="_blank" rel="noreferrer">
         <img alt={alt} src={src} decoding="async" />
-        <div className={linkInfo}>
-          <div className={linkInfoItem}>
+        <div className={styles.linkInfo}>
+          <div className={styles.linkInfoItem}>
             {alt}
             {description ? (
-              <p dangerouslySetInnerHTML={{ __html: description }} className={discriptionInfo}></p>
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className={styles.description}
+              ></p>
             ) : null}
           </div>
         </div>

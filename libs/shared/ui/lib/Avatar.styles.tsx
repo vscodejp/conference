@@ -43,11 +43,10 @@ export const linkInfoItem = css`
   max-width: 100%;
 `
 
-export const discriptionInfo = css`
+export const description = css`
   font-size: 0.7rem;
   line-height: 0.8rem;
   overflow-wrap: break-word;
   word-break: keep-all;
-  width: 90%;
-  max-width: 100%;
+  padding: 0 4px;
 `
