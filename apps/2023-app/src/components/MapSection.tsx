@@ -6,7 +6,7 @@ import styles from '@static/Section.module.scss'
 const MapSection: FC = () => {
   return (
     <section id={'map'} className="w-full mx-auto flex flex-col gap-4">
-      <h2 className="text-light w-full text-center text-lg py-2 rounded-lg">
+      <h2 className="text-dark w-full text-center text-lg py-2 rounded-lg dark:text-light">
         {t('offline_venue')}
       </h2>
       <div className={styles.container}>
