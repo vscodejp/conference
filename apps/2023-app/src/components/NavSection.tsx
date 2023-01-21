@@ -45,6 +45,12 @@ const NavSection: FC = () => {
             <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {t('staffs')}
             </a>
+            <a href="#supporters" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+              {t('supporters')}
+            </a>
+            <a href="#map" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+              {t('offline_venue')}
+            </a>
           </div>
           <FaBars
             onClick={() => setIsOpen(!isOpen)}
@@ -63,6 +69,16 @@ const NavSection: FC = () => {
               <li className="list-none p-0 m-0 flex justify-center items-center">
                 <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
                   {t('staffs')}
+                </a>
+              </li>
+              <li className="list-none p-0 m-0 flex justify-center items-center">
+                <a href="#supporters" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+                  {t('supporters')}
+                </a>
+              </li>
+              <li className="list-none p-0 m-0 flex justify-center items-center">
+                <a href="#map" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+                  {t('offline_venue')}
                 </a>
               </li>
             </ul>
