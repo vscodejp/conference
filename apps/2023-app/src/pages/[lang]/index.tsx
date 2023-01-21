@@ -6,12 +6,12 @@ import NavSection from '@components/NavSection'
 import ConceptSection from '@components/ConceptSection'
 import SocialSection from '@components/SocialSection'
 import AboutSection from '@components/AboutSection'
+import MapSection from '@components/MapSection'
 import PlayerSection from '@components/PlayerSection'
 import TimetableSection from '@components/TimetableSection'
 import StaffSection from '@components/StaffSection'
 import SupporterSection from '@components/SupporterSection'
 import FooterSection from '@components/FooterSection'
-import MapSection from '@components/MapSection'
 
 import { INewtSession, INewtSpeaker, INewtSupporter } from '@conference/shared/types'
 import { fetchCMS } from '@lib/NewtClient'
@@ -37,10 +37,10 @@ export default function Home({ sessions, sessionTotal, supporters, supporterTota
           {SOCIAL && <SocialSection />}
           <AboutSection />
           {PLAYER && <PlayerSection.MainEventPlayer />}
+          <MapSection />
           {TIMETABLE && sessionTotal !== 0 && <TimetableSection sessions={sessions} />}
           <StaffSection />
           {SUPPORTER && supporterTotal != 0 && <SupporterSection supporters={supporters} />}
-          <MapSection />
         </main>
       </div>
 

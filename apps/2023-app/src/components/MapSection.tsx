@@ -1,12 +1,12 @@
 import { t } from 'i18next'
 import { FC } from 'root/react-app-env'
 
-import styles from '@static/Map.module.scss'
+import styles from '@static/Section.module.scss'
 
 const ConceptSection: FC = () => {
   return (
-    <section id={'map'} className="w-10/12 mx-auto flex flex-col gap-4">
-      <h2 className="text-light bg-vscode w-full text-center text-lg py-2 rounded-lg">
+    <section id={'map'} className="w-full mx-auto flex flex-col gap-4">
+      <h2 className="text-light w-full text-center text-lg py-2 rounded-lg">
         {t('offline_venue')}
       </h2>
       <div className={styles.container}>
