@@ -42,14 +42,14 @@ const NavSection: FC = () => {
             <a href="#about" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {t('about')}
             </a>
+            <a href="#map" className="mr-5 hover:text-gray-900 dark:text-gray-400">
+              {t('offline_venue')}
+            </a>
             <a href="#staffs" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {t('staffs')}
             </a>
             <a href="#supporters" className="mr-5 hover:text-gray-900 dark:text-gray-400">
               {t('supporters')}
-            </a>
-            <a href="#map" className="mr-5 hover:text-gray-900 dark:text-gray-400">
-              {t('offline_venue')}
             </a>
           </div>
           <FaBars
