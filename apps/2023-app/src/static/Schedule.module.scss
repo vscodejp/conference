@@ -122,3 +122,18 @@
 
   background: linear-gradient(22deg, #0098ff, #007acc, #0065a9);
 }
+
+.archive {
+  display: flex;
+  gap: 4;
+  justify-content: flex-start;
+  width: 120px;
+  vertical-align: middle;
+
+  a {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -4,9 +4,10 @@ import { Popover as Parent } from '@headlessui/react'
 import { t } from 'i18next'
 import { useDateTime } from '@conference/shared/hooks'
 import { INewtSession } from '@conference/shared/types'
-import { DetailIcon } from '@conference/shared/ui'
+import { ClipIcon, DetailIcon, VideoIcon } from '@conference/shared/ui'
 import { Popover } from './modules/Popover'
 import styles from '@static/Schedule.module.scss'
+import { ARCHIVE } from '../utils/feature'
 
 interface TimetableSectionProps {
   sessions: INewtSession[]
@@ -89,7 +90,7 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                         </Fragment>
                       }
                     >
-                      <Parent.Button className="to-transparent border-0 flex relative text-xl no-underline text-left py-4 text-white cursor-pointer">
+                      <Parent.Button className="to-transparent border-0 flex align-middle relative text-xl no-underline text-left py-4 text-white cursor-pointer">
                         <div className="flex items-start justify-start">{session.title}</div>
                         <div className="w-4 h-4 ml-2">
                           <DetailIcon />
@@ -101,6 +102,30 @@ const TimetableSection: FC<TimetableSectionProps> = ({ sessions }) => {
                         <p>{session.speaker.name}</p>
                       </div>
                     </h3>
+                    {ARCHIVE && (
+                      <div className={styles.archive}>
+                        {session.movieUrl && (
+                          <a
+                            href={session.movieUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={session.movieUrl}
+                          >
+                            <VideoIcon />
+                          </a>
+                        )}
+                        {session.documentUrl && (
+                          <a
+                            href={session.documentUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={session.documentUrl}
+                          >
+                            <ClipIcon />
+                          </a>
+                        )}
+                      </div>
+                    )}
                     <h4 className={styles.sessionTime}>
                       {`${formatTime(session.started_at)} - ${formatTime(session.ended_at)}`}
                     </h4>

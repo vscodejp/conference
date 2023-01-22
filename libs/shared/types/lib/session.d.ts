@@ -48,4 +48,6 @@ export interface INewtSession {
   ended_at: string
   speaker: INewtSpeaker
   area: Area
+  documentUrl?: string
+  movieUrl?: string
 }
