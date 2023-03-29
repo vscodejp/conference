@@ -1,0 +1,21 @@
+{
+  "extends": ["github>jiyuujin/renovate-config"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "packageNames": ["@nrwl/workspace"],
+      "packagePatterns": ["^@nrwl/", "nx"],
+      "groupName": "Nrwl workspace",
+      "postUpgradeTasks": {
+        "commands": [
+          "npx nx migrate latest",
+          "npx nx migrate --run-migrations"
+        ],
+        "fileFilters": ["**/**"]
+      }
+    }
+  ]
+}
