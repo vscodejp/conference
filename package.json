@@ -85,7 +85,7 @@
     "sass": "1.61.0",
     "stylelint": "13.13.1",
     "stylelint-a11y": "1.2.3",
-    "stylelint-config-recess-order": "2.5.0",
+    "stylelint-config-recess-order": "2.6.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-scss": "3.20.1",
     "tailwindcss": "3.2.4",
