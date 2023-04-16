@@ -1837,10 +1837,10 @@
     tslib "^2.4.1"
     uuid "^9.0.0"
 
-"@markuplint/react-spec@3.6.1":
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.6.1.tgz#6c12e0b23c9b80d1d8abf2029f05bdc9aa9603c0"
-  integrity sha512-6G5Wq+z5g7lsCHgpXGc96xsLwRnweNxh5tRnh6jIYmtszXHoZAuVeNUN1jN65qVtnxveTSGqVMSMCNT8WFyrmw==
+"@markuplint/react-spec@3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.7.0.tgz#8b3e35b52fa634addf5421060cc2cb07043c7008"
+  integrity sha512-WUOXWJ8UiHFRaf7Tkq80+3AfYnWUNRh7tiTUFWkgwVn45sL70qS9v8VYOQdkXscqfHoagcLuzHc+kU37dveWAQ==
 
 "@markuplint/rules@3.7.0":
   version "3.7.0"
