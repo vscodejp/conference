@@ -45,8 +45,8 @@ jobs:
       - name: Transpile
         run: |
           yarn
-          yarn nx run 2021-app:build
-          yarn nx run 2023-app:build
+          yarn 2021-app:build
+          yarn 2023-app:build
         env:
           CI: true
           NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
@@ -57,8 +57,8 @@ jobs:
       # `_` から始まるディレクトリが見えず 404 となってしまう対策を追加
       - name: Export
         run: |
-          yarn nx run 2021-app:export
-          yarn nx run 2023-app:export
+          yarn 2021-app:export
+          yarn 2023-app:export
           touch dist/apps/2021-app/exported/.nojekyll
           touch dist/apps/2023-app/exported/.nojekyll
           rm -rf docs/2021 docs/2022-2023
