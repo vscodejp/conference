@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@emotion/css": "11.10.6",
-    "@headlessui/react": "1.6.5",
+    "@headlessui/react": "1.7.14",
     "@nrwl/next": "15.3.3",
     "dayjs": "1.11.7",
     "i18next": "21.8.10",
