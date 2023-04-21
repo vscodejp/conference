@@ -42,15 +42,15 @@ jobs:
       - name: Typecheck
         run: |
           yarn
-          yarn 2021-app:typecheck
-          yarn 2023-app:typecheck
+          yarn nx run 2021-app:typecheck
+          yarn nx run 2023-app:typecheck
         env:
           CI: true
 
       - name: Lint
         run: |
           yarn
-          yarn 2021-app:lint
-          yarn 2023-app:lint
+          yarn nx run 2021-app:lint
+          yarn nx run 2023-app:lint
         env:
           CI: true
