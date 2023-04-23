@@ -12,7 +12,7 @@
     "@headlessui/react": "1.7.14",
     "@nrwl/next": "15.3.3",
     "dayjs": "1.11.7",
-    "i18next": "21.8.10",
+    "i18next": "21.10.0",
     "i18next-browser-languagedetector": "6.1.8",
     "next": "13.0.0",
     "next-optimized-images": "2.6.2",
