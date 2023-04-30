@@ -1845,6 +1845,18 @@
     is-plain-object "^5.0.0"
     tslib "^2.4.1"
 
+"@markuplint/ml-spec@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-3.8.0.tgz#b8980ed0480c0ce5133c3d38c12bc2712d4b7d67"
+  integrity sha512-B3l6XVQ2KO/NYucdizXNHM/XHBDFqCpBFQ3p8CKEw9CY7FNd4qqyxa4jDgnOmCLM3yD6l5+SiWTbj2IMBv+/BQ==
+  dependencies:
+    "@markuplint/ml-ast" "3.1.0"
+    "@markuplint/types" "3.6.0"
+    dom-accessibility-api "^0.5.14"
+    is-plain-object "^5.0.0"
+    tslib "^2.4.1"
+    type-fest "^3.8.0"
+
 "@markuplint/parser-utils@3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-3.6.1.tgz#4bd16d60788d608a52c67fd9b44a8d2f3bc8ef9f"
@@ -1867,10 +1879,12 @@
     type-fest "^3.8.0"
     uuid "^9.0.0"
 
-"@markuplint/react-spec@3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.7.0.tgz#8b3e35b52fa634addf5421060cc2cb07043c7008"
-  integrity sha512-WUOXWJ8UiHFRaf7Tkq80+3AfYnWUNRh7tiTUFWkgwVn45sL70qS9v8VYOQdkXscqfHoagcLuzHc+kU37dveWAQ==
+"@markuplint/react-spec@3.7.1":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.7.1.tgz#6d77b62755a39ebe71d5fc99e5638d828f0c304a"
+  integrity sha512-LQu0tCTZybMUR1Y3En2TYTYVFoCSn9RBEy10Vz53SZ1r527kpURcGBMFrKs96GNjLcuR7/J3Dl29XbMoIm11CA==
+  dependencies:
+    "@markuplint/ml-spec" "3.8.0"
 
 "@markuplint/rules@3.8.0":
   version "3.8.0"
