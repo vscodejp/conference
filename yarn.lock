@@ -1868,6 +1868,18 @@
     tslib "^2.4.1"
     type-fest "^3.8.0"
 
+"@markuplint/ml-spec@3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-3.9.0.tgz#ea5c3d10726622bf5638a778687ee52f1da370dd"
+  integrity sha512-Mf8o81JAc9iL/w0Zw7CUW7pwbqLQN0buRtA5jEOqdCR5pDW8fIluHoT9hxlZFq+SoS2XDG2xBl7YYnDWDdGDAA==
+  dependencies:
+    "@markuplint/ml-ast" "3.1.0"
+    "@markuplint/types" "3.7.0"
+    dom-accessibility-api "^0.5.16"
+    is-plain-object "^5.0.0"
+    tslib "^2.5.0"
+    type-fest "^3.10.0"
+
 "@markuplint/parser-utils@3.7.0":
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-3.7.0.tgz#7b6ca513e699105e2e2ca82a422727e693620f28"
@@ -1892,12 +1904,12 @@
     type-fest "^3.10.0"
     uuid "^9.0.0"
 
-"@markuplint/react-spec@3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.7.1.tgz#6d77b62755a39ebe71d5fc99e5638d828f0c304a"
-  integrity sha512-LQu0tCTZybMUR1Y3En2TYTYVFoCSn9RBEy10Vz53SZ1r527kpURcGBMFrKs96GNjLcuR7/J3Dl29XbMoIm11CA==
+"@markuplint/react-spec@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.8.0.tgz#757d27e6c088714930c584951436f6e8d8c9538b"
+  integrity sha512-n1XkSFX5a4RsDmeIQMYxgrbn6xyLpObDRfTeeQpJ3UW9OiRh7pDQtMybWoIPCnOadd3tW8AFF/0a7IPoQGv3vA==
   dependencies:
-    "@markuplint/ml-spec" "3.8.0"
+    "@markuplint/ml-spec" "3.9.0"
 
 "@markuplint/rules@3.9.0":
   version "3.9.0"
@@ -7489,6 +7501,11 @@ dom-accessibility-api@^0.5.14:
   version "0.5.14"
   resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.14.tgz#56082f71b1dc7aac69d83c4285eef39c15d93f56"
   integrity sha512-NMt+m9zFMPZe0JcY9gN224Qvk6qLIdqex29clBvc/y75ZBX9YA9wNK3frsYvu2DI1xcCIwxwnX+TlsJ2DSOADg==
+
+dom-accessibility-api@^0.5.16:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.16.tgz#5a7429e6066eb3664d911e33fb0e45de8eb08453"
+  integrity sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==
 
 dom-converter@^0.2.0:
   version "0.2.0"
