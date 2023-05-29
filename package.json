@@ -8,7 +8,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@emotion/css": "11.10.8",
+    "@emotion/css": "11.11.0",
     "@headlessui/react": "1.7.14",
     "@nrwl/next": "15.3.3",
     "dayjs": "1.11.7",
@@ -25,8 +25,8 @@
     "ts-node": "10.9.1"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.10.8",
-    "@emotion/react": "11.10.8",
+    "@emotion/babel-plugin": "11.11.0",
+    "@emotion/react": "11.11.0",
     "@markuplint/jsx-parser": "3.7.0",
     "@markuplint/react-spec": "3.8.0",
     "@nrwl/cli": "15.3.3",
