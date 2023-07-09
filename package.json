@@ -27,7 +27,7 @@
   "devDependencies": {
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/react": "11.11.1",
-    "@markuplint/jsx-parser": "3.7.0",
+    "@markuplint/jsx-parser": "3.8.0",
     "@markuplint/react-spec": "3.8.0",
     "@nrwl/cli": "15.3.3",
     "@nrwl/cypress": "15.3.3",
