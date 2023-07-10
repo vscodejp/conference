@@ -1860,6 +1860,18 @@
     tslib "^2.5.0"
     type-fest "^3.10.0"
 
+"@markuplint/ml-spec@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-3.10.0.tgz#afc2edc76eac91dd1b0f49dbbb5987832cbe44cf"
+  integrity sha512-z4v8He7Cgr9UI9uTq8QRLHLspeoYINAA9+8ADyIu4IlhKrXqhHdbSHOD1SfwXqjVKhyr3Ulm8xqlQ+CyRw2r3Q==
+  dependencies:
+    "@markuplint/ml-ast" "3.2.0"
+    "@markuplint/types" "3.8.0"
+    dom-accessibility-api "^0.6.1"
+    is-plain-object "^5.0.0"
+    tslib "^2.5.3"
+    type-fest "^3.11.1"
+
 "@markuplint/ml-spec@3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-3.9.0.tgz#ea5c3d10726622bf5638a778687ee52f1da370dd"
@@ -1896,12 +1908,12 @@
     type-fest "^3.11.1"
     uuid "^9.0.0"
 
-"@markuplint/react-spec@3.8.0":
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.8.0.tgz#757d27e6c088714930c584951436f6e8d8c9538b"
-  integrity sha512-n1XkSFX5a4RsDmeIQMYxgrbn6xyLpObDRfTeeQpJ3UW9OiRh7pDQtMybWoIPCnOadd3tW8AFF/0a7IPoQGv3vA==
+"@markuplint/react-spec@3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.9.0.tgz#fda0b1baf1e71641e012fb02435ba3374d9e2fde"
+  integrity sha512-Kuqfhio3Pn3yDoqThqhTitQf0O9JBkVHxyaMXheyqprDx+sOgKcFZHY9BdiOTA21E4rNQpgvWMIBaEWMKsWrjQ==
   dependencies:
-    "@markuplint/ml-spec" "3.9.0"
+    "@markuplint/ml-spec" "3.10.0"
 
 "@markuplint/rules@3.10.0":
   version "3.10.0"
@@ -7519,6 +7531,11 @@ dom-accessibility-api@^0.5.16:
   version "0.5.16"
   resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.16.tgz#5a7429e6066eb3664d911e33fb0e45de8eb08453"
   integrity sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==
+
+dom-accessibility-api@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.6.1.tgz#630cb063717690fa89a7dca96abae328b987c064"
+  integrity sha512-WbiG8jCZESbcSwxLmbUiv3WZurc6H4opBIbBkBe/I3OSZvWCXXj+wxPueWodM/p4gegM1CqEr0iFY5DqyrncxA==
 
 dom-converter@^0.2.0:
   version "0.2.0"
