@@ -1798,6 +1798,17 @@
     tslib "^2.6.2"
     type-fest "^4.5.0"
 
+"@markuplint/html-parser@3.13.0":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-3.13.0.tgz#7a95dd79c307c03707cae6e1a51fb0f60e833c30"
+  integrity sha512-09GX6V8BmYVIlWECIrV3OVMdKhwhbAlLyvAGnm31qV974gR1zD5kFGmr9OSugZJD24Htqofjm2aI2P15HfDdCg==
+  dependencies:
+    "@markuplint/ml-ast" "3.2.0"
+    "@markuplint/parser-utils" "3.13.0"
+    parse5 "7.1.2"
+    tslib "^2.6.2"
+    type-fest "^4.8.2"
+
 "@markuplint/html-spec@3.13.0":
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-3.13.0.tgz#d0df7bd299a056f61aacab365e569d072dfca692"
@@ -1810,14 +1821,14 @@
   resolved "https://registry.yarnpkg.com/@markuplint/i18n/-/i18n-3.10.0.tgz#6c5244455731dba60c17fa32f20244d5a28ab762"
   integrity sha512-gdugNo0ookMODlYbFMC1jdrrNv55tAABFJNbuPlLmmdct083aEi0COM9R5gRe9zOYQKaLHjTodpcQ9vvpKOcDA==
 
-"@markuplint/jsx-parser@3.11.0":
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/jsx-parser/-/jsx-parser-3.11.0.tgz#8b845bd3fe969d7dd8dd170b5c40de1529e5aa73"
-  integrity sha512-TAey/mNVvo/1r8V363VbOOyD53RpALCnSSR1V+YWrNw6SiFZC60tQAb1SyC5/lK9ppKU5hgSFs7JYbs4KET8+A==
+"@markuplint/jsx-parser@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/jsx-parser/-/jsx-parser-3.12.0.tgz#109011671303043cc9774a469113c26e4f08d757"
+  integrity sha512-Ru235ox95kvu43cMX2vIR0FWjaz09oJGrLb8gzpAJzLPBQJdCYch2z+CM4WsPPWGQSTMFezG/qWeXyMS0G7sEQ==
   dependencies:
-    "@markuplint/html-parser" "3.12.0"
+    "@markuplint/html-parser" "3.13.0"
     "@markuplint/ml-ast" "3.2.0"
-    "@markuplint/parser-utils" "3.12.0"
+    "@markuplint/parser-utils" "3.13.0"
     "@typescript-eslint/types" "5"
     "@typescript-eslint/typescript-estree" "5"
     tslib "^2.6.2"
@@ -1885,6 +1896,18 @@
     type-fest "^4.5.0"
     uuid "^9.0.1"
 
+"@markuplint/parser-utils@3.13.0":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-3.13.0.tgz#f1eb2232f17cf9eb16896c19ce577325d3c08648"
+  integrity sha512-XSefmOiWu4tA2Ke+42XF5C5bdgySzm2dq04ja4YUpHmSPwudvzOjYFWGY6+f00jsW1lEU4SYFDxVONq2OBUYjw==
+  dependencies:
+    "@markuplint/ml-ast" "3.2.0"
+    "@markuplint/types" "3.12.0"
+    "@types/uuid" "^9.0.7"
+    tslib "^2.6.2"
+    type-fest "^4.8.2"
+    uuid "^9.0.1"
+
 "@markuplint/react-spec@3.12.0":
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.12.0.tgz#4949e1b7e9d92e594867f14180dbaf82440ec1eb"
@@ -1944,6 +1967,22 @@
     debug "^4.3.4"
     leven "3"
     type-fest "^4.5.0"
+    whatwg-mimetype "^3.0.0"
+
+"@markuplint/types@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-3.12.0.tgz#c70a6637126cded36eac650399d2c1ba2cc5a8c9"
+  integrity sha512-DG8s61lqBmipcqoi/44JSsn9hwOw6yQaIHfeOEtnjqORWhlL38F3sGh6l+hDW9zh5nltibx9o2jZvlT2LheUYA==
+  dependencies:
+    "@types/bcp-47" "1"
+    "@types/css-tree" "^2.3.4"
+    "@types/debug" "^4.1.12"
+    "@types/whatwg-mimetype" "3.0.2"
+    bcp-47 "1"
+    css-tree "^2.3.1"
+    debug "^4.3.4"
+    leven "3"
+    type-fest "^4.8.2"
     whatwg-mimetype "^3.0.0"
 
 "@mdx-js/mdx@^1.6.22":
@@ -3830,6 +3869,11 @@
   resolved "https://registry.yarnpkg.com/@types/css-tree/-/css-tree-2.3.3.tgz#96e914286baa7150da99dd816f4983f4c06db55f"
   integrity sha512-w2id4lNf2DzAAQ+A3bD9QTY/qpCw9rYlci9RbBscEmF5RO3U/acrcCErvsqkoIZqz9n0yv4CVUqz/6DKDOEZnw==
 
+"@types/css-tree@^2.3.4":
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/@types/css-tree/-/css-tree-2.3.4.tgz#5fc907bb3023a7616e8ce2ddaa08b4ca9e2fe922"
+  integrity sha512-wdxxe7zEpOXfy5C3FmwinAIc/6p6du/wOKMGZf07JHuHHRIvLtLq8h66zi3Yn7PCyswxbp3Ujx9h+vSuMvfN/w==
+
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -3841,6 +3885,13 @@
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.10.tgz#f23148a6eb771a34c466a4fc28379d8101e84494"
   integrity sha512-tOSCru6s732pofZ+sMv9o4o3Zc+Sa8l3bxd/tweTQudFn06vAzb13ZX46Zi6m6EJ+RUbRTHvgQJ1gBtSgkaUYA==
+  dependencies:
+    "@types/ms" "*"
+
+"@types/debug@^4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.12.tgz#a155f21690871953410df4b6b6f53187f0500917"
+  integrity sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==
   dependencies:
     "@types/ms" "*"
 
@@ -4204,6 +4255,11 @@
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.6.tgz#c91ae743d8344a54b2b0c691195f5ff5265f6dfb"
   integrity sha512-BT2Krtx4xaO6iwzwMFUYvWBWkV2pr37zD68Vmp1CDV196MzczBRxuEpD6Pr395HAgebC/co7hOphs53r8V7jew==
 
+"@types/uuid@^9.0.7":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.7.tgz#b14cebc75455eeeb160d5fe23c2fcc0c64f724d8"
+  integrity sha512-WUtIVRUZ9i5dYXefDEAI7sh9/O7jGvHg7Df/5O/gtH3Yabe5odI3UWopVR1qbPXQtvOxWu3mM4XxlYeZtMWF4g==
+
 "@types/webpack-env@^1.16.0":
   version "1.18.0"
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.18.0.tgz#ed6ecaa8e5ed5dfe8b2b3d00181702c9925f13fb"
@@ -4234,6 +4290,11 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/whatwg-mimetype/-/whatwg-mimetype-3.0.1.tgz#7aa02e0340e69b94aa549a3c72ad3c8be65bc370"
   integrity sha512-dy1Os16KVaOyiwS237oURk7v0IGezg06FUlW//WcoAJMqrMSQlHNiYmZz06MgXdqE/uARd9h+sOm4AWRsJvUnQ==
+
+"@types/whatwg-mimetype@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/whatwg-mimetype/-/whatwg-mimetype-3.0.2.tgz#e5e06dcd3e92d4e622ef0129637707d66c28d6a4"
+  integrity sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==
 
 "@types/ws@^8.5.1":
   version "8.5.3"
@@ -18208,6 +18269,11 @@ type-fest@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.5.0.tgz#79208f4dbb8a9946a55889e9f482b95a3292ee41"
   integrity sha512-diLQivFzddJl4ylL3jxSkEc39Tpw7o1QeEHIPxVwryDK2lpB7Nqhzhuo6v5/Ls08Z0yPSAhsyAWlv1/H0ciNmw==
+
+type-fest@^4.8.2:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.8.3.tgz#6db08d9f44d596cd953f83020c7c56310c368d1c"
+  integrity sha512-//BaTm14Q/gHBn09xlnKNqfI8t6bmdzx2DXYfPBNofN0WUybCEUDcbCWcTa0oF09lzLjZgPphXAsvRiMK0V6Bw==
 
 type-is@~1.6.18:
   version "1.6.18"
