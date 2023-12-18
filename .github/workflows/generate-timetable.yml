@@ -13,7 +13,7 @@ jobs:
         env:
           NEXT_PUBLIC_NEWT_SPACE_UID: ${{ secrets.NEXT_PUBLIC_NEWT_SPACE_UID }}
           NEXT_PUBLIC_NEWT_API_TOKEN: ${{ secrets.NEXT_PUBLIC_NEWT_API_TOKEN }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Timetable
           path: /tmp/timetable.md
