@@ -13533,10 +13533,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
-newt-client-js@3.2.8:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/newt-client-js/-/newt-client-js-3.2.8.tgz#7c6f021ee57c67c510582e80829c102b3f7ce8b4"
-  integrity sha512-Cd4Dd9NXlPo8iWJc8rghhdm7pfkjyUhCBM+Xiog8ZOoArk0w4rx8iPnI4HV66dfIu6u1BmuHo6hSrxqSOx6HIA==
+newt-client-js@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/newt-client-js/-/newt-client-js-3.3.0.tgz#447236bccee255bdd9665acd969b7fb1fdeeaf9a"
+  integrity sha512-eD+ncGa3hEGKLuvfxGTj2a8I3vjSZjM5LAHw44TnchIjFD3T9ak2JQTm/JMgi0W7N909Ial0aJ84NY+6P0bATg==
   dependencies:
     axios "^1.6.0"
     axios-retry "^3.2.4"
