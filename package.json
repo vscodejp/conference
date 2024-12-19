@@ -62,7 +62,7 @@
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "10.0.1",
     "markuplint": "3.15.0",
-    "newt-client-js": "3.3.0",
+    "newt-client-js": "3.3.7",
     "prettier": "2.8.8",
     "sass": "1.71.1",
     "stylelint": "13.13.1",
