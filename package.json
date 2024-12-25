@@ -28,7 +28,7 @@
     "@emotion/babel-plugin": "11.13.5",
     "@emotion/react": "11.14.0",
     "@markuplint/jsx-parser": "3.12.0",
-    "@markuplint/react-spec": "3.13.0",
+    "@markuplint/react-spec": "4.5.14",
     "@nrwl/cli": "15.3.3",
     "@nrwl/cypress": "15.3.3",
     "@nrwl/eslint-plugin-nx": "15.3.3",
