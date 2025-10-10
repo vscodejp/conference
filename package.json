@@ -44,7 +44,7 @@
     "@storybook/addon-links": "6.5.16",
     "@storybook/builder-vite": "0.4.2",
     "@storybook/react": "6.5.16",
-    "@types/node": "18.19.68",
+    "@types/node": "18.19.130",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@typescript-eslint/eslint-plugin": "5.62.0",
